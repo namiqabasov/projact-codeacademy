@@ -1,0 +1,683 @@
+main {
+  padding: 200px 0;
+
+  .fade {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    .slidecard {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      display: flex;
+      position: relative;
+
+      .easily {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+
+        h2 {
+          color: brown;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        h1 {
+          font-size: 62px;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 16px;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+        }
+
+        button {
+          padding: 15px 30px;
+          border: 1px solid white;
+          background-color: white;
+          color: black;
+          border-radius: 20px;
+          transition: 0.4s;
+
+          &:hover {
+            background-color: rgba(226, 92, 92, 0);
+            color: rgb(255, 251, 251);
+            transform: rotateY(5deg);
+            border: 1px solid;
+          }
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .easily {
+          gap: 1%;
+
+          h2 {
+            color: brown;
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          h1 {
+            font-size: 42px;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 12px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+          }
+
+          button {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+
+    .slick-prev {
+      left: 20px;
+      position: absolute;
+      margin-top: 30%;
+      transform: translate(0, -50%);
+      z-index: 2;
+      border: 0;
+      font-size: 32px;
+      background: none;
+      color: white;
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    .slick-next {
+      top: 0;
+      right: 20px;
+      position: absolute;
+      margin-top: 30%;
+      transform: translate(0, -50%);
+      z-index: 2;
+      border: 0;
+      font-size: 32px;
+      background: none;
+      color: white;
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+
+      li {
+        padding: 2%;
+
+        button {
+          background-color: rgba(161, 104, 104, 0.774);
+          color: rgba(89, 196, 223, 0);
+          border: 1px solid rgba(134, 113, 96, 0.774);
+
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.125);
+          }
+        }
+      }
+    }
+  }
+
+  .rooms {
+    .mycontainer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      .myroom {
+        max-width: 350px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 200px;
+        }
+
+        .name {
+          position: absolute;
+
+          p {
+            color: white;
+            font-size: 200%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mycontainer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  .product {
+    .mycontainer {
+
+      .recend {
+        p {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+
+      .mycards {
+        padding-top: 100px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .card {
+          width: 300px;
+
+          .img {
+            position: relative;
+            transition: 0.4s;
+            overflow: hidden;
+            height: 200px;
+
+            .wislis {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 2;
+              background: none;
+              border: 0;
+              font-size: 20px;
+
+              i {
+                color: red;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 200px;
+              transition: 0.4s;
+
+
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.2);
+
+              }
+            }
+
+            .divbtn {
+              position: absolute;
+              background-color: black;
+              z-index: 2;
+              bottom: -80px;
+              transition: 0.4s;
+              display: flex;
+              width: 100%;
+
+
+
+
+              .see {
+                background-color: black;
+                color: white;
+                width: 50%;
+                padding: 20px 0;
+
+                border: 0;
+
+                i {
+                  margin-left: 10px;
+                }
+              }
+
+              .basket {
+                background-color: rgba(255, 0, 0, 0.575);
+                color: black;
+              }
+
+              button {
+                width: 50%;
+                padding: 20px 0;
+
+                border: 0;
+              }
+            }
+
+            &:hover {
+              .divbtn {
+                bottom: 0;
+
+                button {
+                  display: block;
+                  padding: 20px 0;
+
+                }
+              }
+            }
+          }
+
+          .shop {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+
+            .sale {
+              display: flex;
+              align-self: center;
+              justify-content: center;
+              padding: 5%;
+              border-radius: 50%;
+              color: white;
+              background-color: rgba(247, 125, 125, 0.755);
+            }
+
+            .ptag {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              p {
+                color: black;
+                font-weight: bold;
+                font-size: 24px;
+              }
+
+              h2 {
+                font-size: 22px;
+                color: rgba(247, 125, 125, 0.755);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .Discover {
+    background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    width: 100%;
+    height: 750px;
+    background-size: auto;
+    animation: 5s linear infinite;
+    transition: 10s;
+
+    .mycontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10%;
+      height: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 45px;
+        color: white;
+      }
+
+      button {
+        padding: 20px 30px;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        transition: 0.4s;
+        border: 0;
+
+        &:hover {
+          background-color: rgba(93, 40, 40, 0.851);
+          color: white;
+        }
+      }
+    }
+
+    @media screen and (max-width:360px) {
+      .mycontainer {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .Fashion {
+    .mycontainer {
+      .myname {
+        h2 {
+          text-align: center;
+          font-size: 32px;
+          padding: 100px 0;
+        }
+      }
+
+      .autoplay {
+        .card {
+          max-width: 300px;
+          height: auto;
+          padding-right: 1%;
+
+          .img {
+            position: relative;
+            transition: 0.4s;
+            overflow: hidden;
+            height: auto;
+
+            .wislis {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 2;
+              background: none;
+              border: 0;
+              font-size: 16px;
+
+              i {
+                color: red;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              transition: 0.4s;
+
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.2);
+
+              }
+            }
+
+            .divbtn {
+              position: absolute;
+              background-color: black;
+              z-index: 2;
+              bottom: -80px;
+              transition: 0.4s;
+              display: flex;
+              width: 100%;
+
+              .see {
+                background-color: black;
+                color: white;
+                width: 50%;
+                padding: 20px 0;
+
+                border: 0;
+                font-size: 12px;
+
+                i {
+                  margin-left: 10px;
+                }
+              }
+
+              .basket {
+                background-color: rgba(255, 0, 0, 0.575);
+                color: black;
+              }
+
+              button {
+                width: 50%;
+                padding: 20px 0;
+                font-size: 12px;
+
+                border: 0;
+              }
+            }
+
+            &:hover {
+              .divbtn {
+                bottom: 0;
+
+                button {
+                  display: block;
+                  padding: 20px 0;
+
+                }
+              }
+            }
+          }
+        }
+
+        .shop {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px 0;
+
+          .sale {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            padding: 5%;
+            border-radius: 50%;
+            color: white;
+            background-color: rgba(247, 125, 125, 0.755);
+            font-size: 15px;
+          }
+
+
+
+          .ptag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1%;
+
+            p {
+              color: black;
+              font-weight: bold;
+              font-size: 18px;
+            }
+
+            h2 {
+              font-size: 16px;
+              color: rgba(247, 125, 125, 0.755);
+            }
+          }
+        }
+
+        @media screen and (max-width:768px) {
+          .shop {
+
+            .sale {
+              display: none;
+            }
+
+          }
+        }
+
+        .slick-next {
+          opacity: 0;
+          cursor: auto;
+        }
+
+        .slick-prev {
+          opacity: 0;
+          cursor: auto;
+        }
+
+        .slick-dots {
+          display: flex;
+          justify-content: center;
+
+
+
+
+          li {
+            padding: 2%;
+
+            button {
+              background-color: rgba(161, 104, 104, 0.774);
+              color: rgba(89, 196, 223, 0);
+              border: 1px solid rgba(134, 113, 96, 0.774);
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              transition: 0.2s;
+
+              &:hover {
+                transform: scale(1.125);
+              }
+            }
+
+          }
+
+          .slick-active {
+            button {
+              background-color: rgb(91, 41, 41);
+              background-color: rgb(91, 41, 41);
+            }
+          }
+
+
+        }
+
+
+      }
+
+
+    }
+  }
+
+
+  .CUSTOMERS {
+    padding: 100px 0;
+
+    .mycontainer {
+      max-width: 1440px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1%;
+
+      .word {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        background-color: rgba(215, 213, 213, 0.545);
+        padding: 150px 20px;
+
+        i {
+          border: 1px solid black;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        h2 {
+          font-size: 24px;
+          color: black;
+        }
+
+        p {
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.425);
+        }
+
+        button {
+          padding: 20px 30px;
+          border-radius: 10px;
+          background-color: white;
+
+          border: 0;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: rgb(222, 209, 209);
+          }
+        }
+      }
+
+      .SHIPPING {
+        max-width: 450px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        background-color: rgba(145, 34, 34, 0.812);
+        padding: 150px 20px;
+
+        h2 {
+          font-size: 24px;
+          color: white;
+        }
+
+        p {
+          font-size: 18px;
+          color: white;
+        }
+
+        i {
+          font-size: 32px;
+        }
+
+        button {
+          padding: 20px 30px;
+          border-radius: 10px;
+          background-color: white;
+
+          border: 0;
+          background-color: white;
+          transition: 0.3s;
+
+
+
+          &:hover {
+            background-color: rgb(222, 209, 209);
+
+
+          }
+        }
+      }
+    }
+  }
+
+
+}

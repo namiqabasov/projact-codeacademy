@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mycontainer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a,
+ul,
+ol {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2,
+h3,
+p {
+  font-family: 'Work Sans', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}

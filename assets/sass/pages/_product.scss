@@ -1,0 +1,181 @@
+main {
+
+    .topics {
+        .mycontainer {
+            .name {
+                padding: 100px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-size: 44px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.629);
+                    max-width: 600px;
+                }
+            }
+
+            .myaddiction {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+
+                .cards {
+                    display: flex;
+                    gap: 20px;
+                    max-width: 600px;
+                    width: 100%;
+                    position: relative;
+
+                    img {
+                        transition: 0.5s;
+                        width: 100%;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .time {
+                        position: absolute;
+                        left: 0;
+                        background-color: black;
+                        color: white;
+                        padding: 20px;
+                    }
+
+                    .hilton {
+                        font-size: 18px;
+                        font-weight: bold;
+                        padding: 20px 0;
+                    }
+
+                    .lorem {
+                        padding: 20px 0;
+                    }
+
+                    .icons {
+                        display: flex;
+
+                        i {
+                            padding-left: 20px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+
+
+
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: 80px 0;
+
+                button {
+                    border: 0;
+                    background-color: rgba(2, 137, 199, 0.785);
+                    padding: 15px 30px;
+                    border-radius: 15px;
+                    color: white;
+                    transition: 0.1s;
+                    border: 1px solid white;
+
+
+                    &:hover {
+                        background-color: white;
+                        color: rgba(2, 137, 199, 0.785);
+                        border: 1px solid;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:900px) {
+
+        .topics {
+            .mycontainer {
+
+                .myaddiction {
+                    grid-template-columns: 1fr;
+
+                    .cards {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:768px) {
+
+        .topics {
+            .mycontainer {
+
+                .myaddiction {
+                    grid-template-columns: 1fr;
+
+                    .cards {
+                        width: 70%;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:468px) {
+
+        .topics {
+            .mycontainer {
+
+                .myaddiction {
+                    grid-template-columns: 1fr;
+
+                    .cards {
+                        width: 20%;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:368px) {
+
+        .topics {
+            .mycontainer {
+
+                .myaddiction {
+                    grid-template-columns: 1fr;
+
+                    .cards {
+                        width: 10%;
+                        height: auto;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+}

@@ -1,0 +1,249 @@
+nav {
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+  transition: 0.4s;
+  top: -20px;
+
+  .mycontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    .mylogo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pod {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      .remove {
+        display: none;
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 0 20px;
+
+      .Search {
+        .myinput {
+          display: none;
+
+          .position {
+            position: relative;
+          }
+        }
+
+        .activinput {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.514);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 4;
+
+          i {
+            position: absolute;
+            color: white;
+            top: 15px;
+            left: 13px;
+          }
+
+          input {
+            padding: 15px 40px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            border: none;
+          }
+
+          button {
+            position: absolute;
+            right: -10%;
+            top: 10px;
+            background: none;
+            border: 0;
+            color: white;
+            font-size: 24px;
+            transition: 0.2s;
+
+            &:hover {
+              transform: rotateZ(-90deg);
+            }
+          }
+        }
+      }
+
+
+      .basket {
+        position: relative;
+
+        .basget_leng {
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          z-index: 4;
+          background-color: red;
+          color: white;
+          border-radius: 50px;
+          width: 15px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+
+      .wishlist {
+        position: relative;
+
+        .wishlist_leng {
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          z-index: 4;
+          background-color: red;
+          color: white;
+          border-radius: 50px;
+          width: 15px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .bars {
+      display: none;
+    }
+  }
+
+
+
+  @media screen and (max-width: 900px) {
+    .mycontainer {
+      position: relative;
+
+      .mylogo {
+        max-width: 200px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      ul {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        transition: 0.5s;
+
+
+        li {
+          display: none;
+        }
+      }
+
+      .activebar {
+        z-index: 2;
+        opacity: 1;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.685);
+
+        .remove {
+          color: white;
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 100px;
+          background: none;
+          border: 0;
+          font-size: 24px;
+        }
+
+        li {
+          display: block;
+          transition: 0.7s;
+          width: 0;
+
+          a {
+            font-size: 24px;
+            transition: 0.9;
+            color: white;
+          }
+
+          &:hover {
+            background-color: rgba(0, 217, 255, 0.507);
+            width: 100px;
+
+            a {
+              color: rgb(66, 66, 66);
+            }
+          }
+        }
+      }
+
+      .bars {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-size: 32px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.navbox {
+  position: fixed;
+  height: auto;
+
+  top: 0;
+
+
+  .mycontainer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .pod {
+      column-gap: 100px;
+    }
+  }
+
+}
+
+@media screen and (max-width:455px) {
+  .navbox {
+    .mycontainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+
+      .pod {
+        flex-wrap: nowrap;
+        gap: 0;
+      }
+    }
+  }
+}
