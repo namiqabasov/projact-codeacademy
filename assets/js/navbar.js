@@ -49,7 +49,7 @@ inputremov.addEventListener("click", function () {
 });
 
 async function imputFetch() {
-  const res = await fetch("http://localhost:3000/post");
+  const res = await fetch("https://namiq-myapi.onrender.com/");
   const data = await res.json();
   data.forEach((element) => {
     if (

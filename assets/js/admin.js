@@ -81,7 +81,7 @@ const pabout = document.querySelector("#pabout");
 const psael = document.querySelector("#psael");
 
 async function putfetch(editobj) {
-  const res = await fetch(`http://localhost:3000/post/${editobj.id}`, {
+  const res = await fetch(`https://namiq-myapi.onrender.com/${editobj.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const price = document.querySelector("#price");
 const command = document.querySelector("#command");
 
 async function postfetch(postobj) {
-  const res = await fetch(`http://localhost:3000/post`, {
+  const res = await fetch(`https://namiq-myapi.onrender.com/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -122,7 +122,7 @@ my_apiform.addEventListener("submit", function () {
 
 //creat ucun
 async function myfetch() {
-  const res = await fetch(`http://localhost:3000/post`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await res.json();
 
   data.forEach((element) => {
@@ -137,7 +137,7 @@ async function myfetch() {
 }
 
 async function myfetchdelet(data) {
-  const res = await fetch(`http://localhost:3000/post/${data.id}`, {
+  const res = await fetch(`https://namiq-myapi.onrender.com/${data.id}`, {
     method: "DELETE",
   });
 }

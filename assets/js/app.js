@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
 
 // mocapi hissesi
 async function myfetch() {
-  const respon = await fetch(`http://localhost:3000/post`);
+  const respon = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await respon.json();
 
   data.forEach((element) => {
@@ -15,7 +15,7 @@ async function myfetch() {
   });
 }
 async function myfetch1() {
-  const respon = await fetch(`http://localhost:3000/post`);
+  const respon = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await respon.json();
 
   const nevdata = await data.forEach((element) => {
