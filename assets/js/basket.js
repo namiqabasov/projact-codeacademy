@@ -1,9 +1,17 @@
 const Basgetcard = document.querySelector(".Basgetcard");
 const total = document.querySelector(".total p");
-
+const wishlist_leng = document.querySelector(".wishlist_leng");
+const basget_leng = document.querySelector(".basget_leng");
+let wishlist_arr = [];
 let basket_arr = [];
-
-basket_arr = JSON.parse(localStorage.getItem("basket"));
+if (localStorage.getItem("basket") !== null) {
+  basket_arr = JSON.parse(localStorage.getItem("basket"));
+  basget_leng.innerHTML = basketarr.length;
+}
+if (localStorage.getItem("wishlist") !== null) {
+  wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+  wishlist_leng.innerHTML = wishlist_arr.length;
+}
 
 getTotal();
 basket_arr.forEach((element) => {
@@ -12,6 +20,7 @@ basket_arr.forEach((element) => {
   const imgdiv = document.createElement("div");
   const myimg = document.createElement("img");
   const h3 = document.createElement("h3");
+  const a = document.createElement("a");
   const incin = document.createElement("button");
   const secp = document.createElement("p");
   const decin = document.createElement("button");
@@ -20,7 +29,8 @@ basket_arr.forEach((element) => {
   imgdiv.className = "imgdiv";
   mydiv.classList.add("card");
   myimg.src = element.img_src;
-  h3.innerHTML = element.name;
+  a.innerHTML = element.name;
+  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
   incin.innerHTML = "+";
   secp.innerHTML = element.count;
   decin.innerHTML = "-";
@@ -52,11 +62,12 @@ basket_arr.forEach((element) => {
     getTotal();
 
     delet.parentElement.parentElement.remove();
-    window.location.reload();
+    basget_leng.innerHTML = basket_arr.length;
   });
 
   creddiv.classList.add("basket_item");
   imgdiv.append(myimg);
+  h3.append(a);
   creddiv.append(h3, decin, secp, incin, delet);
   mydiv.append(creddiv, imgdiv);
   Basgetcard.append(mydiv);

@@ -1,0 +1,348 @@
+.myadmin {
+    position: relative;
+    display: none;
+
+    .mylogo {
+        background: rgb(145, 230, 252);
+        background: linear-gradient(0deg, rgba(145, 230, 252, 1) 0%, rgba(102, 122, 232, 0.7456232492997199) 100%);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+
+        .singout {
+            background-color: rgba(244, 88, 88, 0.842);
+            color: rgb(235, 211, 211);
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: rgb(250, 81, 81);
+                color: white;
+            }
+        }
+
+        .myicon {
+            font-size: 32px;
+            padding: 0 30px;
+        }
+
+        .admin_input {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
+
+            input {
+                padding: 10px 20px;
+                border-radius: 20px;
+                max-width: 200px;
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    .admin_bar {
+        display: flex;
+        padding-top: 100px;
+
+
+        ul {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            border-right: 1px solid rgba(0, 0, 0, 0.253);
+            background: rgb(63, 94, 251);
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 0.3926820728291317) 100%);
+
+            li {
+                button {
+                    max-width: 200px;
+                    width: 100%;
+                    background-color: white;
+                    padding: 10px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: 0;
+                    border-radius: 3px;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background: rgba(131, 58, 180, 0.592);
+                        color: white;
+                    }
+                }
+
+                @media screen and (max-width:567px) {
+                    button {
+                        font-size: 10px;
+                        font-weight: 300;
+                    }
+                }
+
+                @media screen and (max-width:470px) {
+                    button {
+                        font-size: 5px;
+
+                    }
+                }
+
+                @media screen and (max-width:280px) {
+                    button {
+                        font-size: 3px;
+
+                    }
+                }
+            }
+        }
+
+
+        .MYapi {
+            position: absolute;
+            right: 0;
+            width: 80%;
+
+            .admin_form {
+                padding: 100px 20px;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+
+
+
+                input {
+                    max-width: 500px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    padding: 10px 15px;
+                    border-radius: 3px;
+                    border: 1px solid rgba(63, 61, 61, 0.359);
+                    box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+
+                }
+
+                button {
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 15px 30px;
+                    border: 0;
+                    background-color: rgb(44, 71, 38);
+                    font-size: 18px;
+                    color: rgb(179, 175, 175);
+                    font-weight: bold;
+                    transition: 0.4s;
+                    border-radius: 10px;
+                    box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+
+
+                    &:hover {
+
+                        background-color: rgba(27, 88, 13, 0.885);
+                        color: white;
+                    }
+                }
+
+            }
+
+            .api_myform {
+                .editform {
+                    padding: 100px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 1px solid rgba(0, 0, 0, 0.275);
+                    max-width: 600px;
+                    width: 100%;
+                    background-color: white;
+                    box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+                    margin: 30px auto;
+
+
+                    h1 {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 32px;
+                        padding-bottom: 100px;
+                    }
+
+                    @media screen and (max-width:300px) {
+                        h1 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    input {
+                        max-width: 300px;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        padding: 10px 15px;
+                        border-radius: 3px;
+                        border: 1px solid rgba(63, 61, 61, 0.359);
+                    }
+
+                    button {
+                        padding: 15px 30px;
+                        border: 0;
+                        background-color: rgb(71, 38, 38);
+                        font-size: 18px;
+                        color: rgb(179, 175, 175);
+                        font-weight: bold;
+                        transition: 0.4s;
+                        border-radius: 10px;
+
+                        &:hover {
+
+                            background-color: rgba(72, 13, 13, 0.804);
+                            color: white;
+                        }
+                    }
+
+                    a {
+                        padding: 15px 30px;
+                        border: 0;
+                        background-color: rgb(71, 38, 38);
+                        font-size: 18px;
+                        color: rgb(0, 0, 0);
+                        font-weight: bold;
+                        transition: 0.4s;
+                        border-radius: 10px;
+
+                        &:hover {
+
+                            background-color: rgba(72, 13, 13, 0.804);
+                            color: white;
+                        }
+                    }
+
+                }
+
+                .apicard {
+                    .cart {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        padding: 10px;
+                        margin: 10px;
+                        border: 1px solid rgba(77, 77, 77, 0.684);
+
+                        .img {
+                            max-width: 100px;
+
+                            img {
+
+                                width: 100%;
+                            }
+                        }
+
+                        .about {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            max-width: 300px;
+                            text-align: center;
+                            height: 100px;
+
+                            p {
+                                overflow: auto;
+
+                            }
+
+                        }
+
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            padding-left: 10px;
+
+                            button {
+                                padding: 5px 10px;
+                                border: 0;
+                                transition: 0.4s;
+                                border-radius: 6px;
+
+                                &:hover {
+                                    background-color: rgba(244, 4, 4, 0.478);
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+
+        }
+
+
+
+    }
+}
+
+.admin_start {
+    .adminlogin {
+        padding: 100px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.275);
+        max-width: 500px;
+        margin: 100px auto;
+        box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 32px;
+            padding-bottom: 100px;
+            color: rgb(3, 134, 7);
+        }
+
+        @media screen and (max-width:300px) {
+            h1 {
+                font-size: 18px;
+            }
+        }
+
+        input {
+            max-width: 300px;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border-radius: 3px;
+            border: 1px solid rgba(63, 61, 61, 0.359);
+        }
+
+        button {
+            padding: 15px 30px;
+            border: 0;
+            background-color: rgb(234, 11, 11);
+            font-size: 18px;
+            color: rgb(179, 175, 175);
+            font-weight: bold;
+            transition: 0.4s;
+            border-radius: 10px;
+
+            &:hover {
+
+                background-color: rgba(4, 82, 16, 0.804);
+                color: white;
+            }
+        }
+    }
+}

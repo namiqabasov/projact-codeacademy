@@ -71,6 +71,8 @@ async function myfetch1() {
 }
 const mycards = document.querySelector(".mycards");
 const autoplay = document.querySelector(".autoplay");
+const wishlist_leng = document.querySelector(".wishlist_leng");
+const basget_leng = document.querySelector(".basget_leng");
 
 let basket_arr = [];
 let wishlist_arr = [];
@@ -79,11 +81,14 @@ let wishlist_arr = [];
 window.onload = function () {
   if (localStorage.getItem("basket") !== null) {
     basket_arr = JSON.parse(localStorage.getItem("basket"));
+    basget_leng.innerHTML = basketarr.length;
   }
   if (localStorage.getItem("wishlist") !== null) {
     wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+    wishlist_leng.innerHTML = wishlist_arr.length;
   }
 };
+
 function cretElement(data) {
   // createelement
   const carddiv = document.createElement("div");
@@ -106,7 +111,7 @@ function cretElement(data) {
       basket_arr.push({ ...data, count: 1 });
     }
     localStorage.setItem("basket", JSON.stringify(basket_arr));
-    window.location.reload();
+    basget_leng.innerHTML = basket_arr.length;
   });
 
   if (wishlist_arr.find((x) => x.id == data.id) !== undefined) {
@@ -122,7 +127,7 @@ function cretElement(data) {
       btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
     }
     localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
-    window.location.reload();
+    wishlist_leng.innerHTML = wishlist_arr.length;
   });
 
   const myp = document.createElement("p");
@@ -189,7 +194,7 @@ function cretElement1(data) {
       basket_arr.push({ ...data, count: 1 });
     }
     localStorage.setItem("basket", JSON.stringify(basket_arr));
-    window.location.reload();
+    basget_leng.innerHTML = basket_arr.length;
   });
   btnwishlist.addEventListener("click", () => {
     if (wishlist_arr.find((x) => x.id == data.id) === undefined) {
@@ -200,7 +205,7 @@ function cretElement1(data) {
       btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
     }
     localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
-    window.location.reload();
+    wishlist_leng.innerHTML = wishlist_arr.length;
   });
 
   const myp = document.createElement("p");
@@ -248,3 +253,61 @@ Select Options`;
 
 myfetch();
 myfetch1();
+
+const mylogin = document.querySelector(".mylogin");
+const mynumber = document.querySelector(".mynumber");
+
+// if (window.location.hash.slice(1) === "") {
+//   mylogin.innerHTML = `<a href="login.html?#">login</a>`;
+// } else {
+//   // async function loginfetch() {
+//   //   const res = await fetch(
+//   //     `http://localhost:3000/login/${window.location.hash.slice(1)}`
+//   //   );
+//   //   const data = await res.json();
+//   //   mynumber.innerText = data.mail;
+
+//   //   const div = document.createElement("div");
+//   //   const btn = document.createElement("button");
+//   //   const h2 = document.createElement("h2");
+//   //   const p = document.createElement("p");
+//   //   h2.innerText = data.name;
+//   //   p.innerText = data.lastname;
+//   //   btn.innerText = "SING OUT";
+
+//   //   btn.addEventListener("click", function () {
+//   //     window.location.hash = "";
+//   //   });
+//   //   div.append(h2, p);
+//   //   mylogin.append(div, btn);
+//   // }
+//   // // loginfetch();
+
+// }
+
+if (localStorage.getItem("user")) {
+  console.log(JSON.parse(localStorage.getItem("user")));
+  const mail = JSON.parse(localStorage.getItem("user")).mail;
+  const name = JSON.parse(localStorage.getItem("user")).name;
+  const lastname = JSON.parse(localStorage.getItem("user")).lastname;
+
+  mylogin.innerHTML = "";
+  mynumber.innerText = mail;
+
+  const div = document.createElement("div");
+  const btn = document.createElement("button");
+  const h2 = document.createElement("h2");
+  const p = document.createElement("p");
+  h2.innerText = name;
+  p.innerText = lastname;
+  btn.innerText = "SING OUT";
+
+  btn.addEventListener("click", function () {
+    localStorage.removeItem("user");
+    window.location.reload();
+  });
+  div.append(h2, p);
+  mylogin.append(div, btn);
+} else {
+  mylogin.innerHTML = `<a href="login.html?#">login</a>`;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN_PANEL:)</title>
+    <!-- fontavesom link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fontavesom link -->
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="myadmin" id="admindiv">
+      <div class="mylogo">
+        <div>
+          <i class="myicon fa-solid fa-gears"></i>
+          <button class="singout">SING OUT</button>
+        </div>
+        <div class="admin_input">
+          <input type="text" id="adinput" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="admin_bar">
+        <ul>
+          <li>
+            <a href="home.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><button class="menu_btn">MENU</button></li>
+          <li><button class="add_btn">ADD PRODUCT</button></li>
+        </ul>
+        <div class="MYapi">
+          <form action="#" class="admin_form" id="my_apiform">
+            <label for="name">PRODUCT NAME:</label>
+            <input type="text" id="name" />
+
+            <label for="img">IMG SRC :</label>
+            <input type="url" id="img" />
+
+            <label for="sale">"SALE!" and "false" :</label>
+            <input type="text" id="sale" />
+
+            <label for="price">PRICE :</label>
+            <input type="number" id="price" />
+
+            <label for="command">ABOUT PRODUCT :</label>
+            <input type="text" id="command" />
+
+            <button type="submit">SUBMIT</button>
+          </form>
+
+          <div class="api_myform">
+            <div class="apicard"></div>
+            <form action="#" class="editform" id="myeditform">
+              <h1>EDIDT PRADUCT</h1>
+              <label for="pname">NAME</label>
+              <input type="text" id="pname" />
+              <label for="pimgsrc">IMG SRC</label>
+              <input type="url" id="pimgsrc" />
+              <label for="pprice">PRICE</label>
+              <input type="number" id="pprice" />
+              <label for="pabout">ABOUT</label>
+              <input type="text" id="pabout" />
+              <label for="psael">"SALE!" and "false"</label>
+              <input type="text" id="psael" />
+
+              <div class="mybtndiv">
+                <button type="submit" class="regsterbtn">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="admin_start">
+      <form action="#" class="adminlogin">
+        <h1>ADMIN LOGIN</h1>
+        <label for="adminname">ADMIN NAME</label>
+        <input type="text" id="adminname" />
+        <label for="adminpass">PASSWORD</label>
+        <input type="password" id="adminpass" />
+        <button type="submit" class="mybtn">LOGIN</button>
+      </form>
+    </div>
+
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

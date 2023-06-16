@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .mycontainer {
@@ -69,7 +70,71 @@ nav .mycontainer .icons .Search .myinput {
   display: none;
 }
 nav .mycontainer .icons .Search .myinput .position {
+  top: 20px;
   position: relative;
+}
+nav .mycontainer .icons .Search .myinput .input_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv {
+  overflow: hidden;
+  width: 100%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv img {
+  width: 100%;
+  height: 200px;
+  transition: 0.4s;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover img {
+  transform: scale(1.2);
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn {
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  bottom: -80px;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn .see {
+  background-color: black;
+  color: white;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn button {
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover .divbtn {
+  bottom: 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover .divbtn button {
+  display: block;
+  padding: 20px 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card p {
+  color: rgb(148, 8, 8);
+  font-weight: bold;
+  font-size: 24px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card h3 {
+  padding: 20px 0;
+  font-size: 22px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card h3 a {
+  color: rgb(47, 26, 6);
+  font-weight: bold;
 }
 nav .mycontainer .icons .Search .activinput {
   display: block;
@@ -80,9 +145,11 @@ nav .mycontainer .icons .Search .activinput {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.514);
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   align-items: center;
-  justify-content: center;
   z-index: 4;
+  overflow: auto;
 }
 nav .mycontainer .icons .Search .activinput i {
   position: absolute;
@@ -96,6 +163,7 @@ nav .mycontainer .icons .Search .activinput input {
   color: white;
   border-radius: 20px;
   border: none;
+  max-width: 300px;
 }
 nav .mycontainer .icons .Search .activinput button {
   position: absolute;
@@ -192,14 +260,15 @@ nav .mycontainer .bars {
   nav .mycontainer .activebar li a {
     font-size: 24px;
     transition: 0.9;
-    color: white;
+    color: rgba(255, 255, 255, 0.745);
+    transition: 0.4s;
   }
   nav .mycontainer .activebar li:hover {
     background-color: rgba(0, 217, 255, 0.507);
     width: 100px;
   }
   nav .mycontainer .activebar li:hover a {
-    color: rgb(66, 66, 66);
+    color: rgb(255, 255, 255);
   }
   nav .mycontainer .bars {
     display: flex;
@@ -237,6 +306,46 @@ nav .mycontainer .bars {
 header {
   height: 200px;
   background-color: white;
+}
+header .logindiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  width: 100%;
+  height: 50px;
+}
+header .logindiv .mynumber p {
+  color: rgb(55, 5, 83);
+  font-size: 24px;
+}
+header .logindiv .mylogin {
+  display: flex;
+  gap: 10px;
+}
+header .logindiv .mylogin a {
+  color: rgba(21, 157, 0, 0.562);
+  transition: 0.4s;
+  font-size: 24px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background-color: rgba(4, 39, 120, 0.814);
+}
+header .logindiv .mylogin a:hover {
+  color: rgb(21, 157, 0);
+}
+header .logindiv .mylogin button {
+  border: 0;
+  background-color: rgb(30, 236, 181);
+  color: rgb(2, 2, 2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+header .logindiv .mylogin button:hover {
+  color: white;
+  background-color: rgb(132, 3, 3);
 }
 
 main {
@@ -2201,4 +2310,402 @@ main .mycontainer .Wishlistcard .shop .ptag p {
 main .mycontainer .Wishlistcard .shop .ptag h2 {
   font-size: 22px;
   color: rgba(247, 125, 125, 0.755);
+}
+
+.registration {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.275);
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.registration h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 300px) {
+  .registration h1 {
+    font-size: 18px;
+  }
+}
+.registration input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.registration button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.registration button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.registration a {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.registration a:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+
+.login {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.275);
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.login h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 300px) {
+  .login h1 {
+    font-size: 18px;
+  }
+}
+.login input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.login button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.login button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.login a {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.login a:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+
+@media screen and (max-width: 340px) {
+  .mybtndiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.myadmin {
+  position: relative;
+  display: none;
+}
+.myadmin .mylogo {
+  background: rgb(145, 230, 252);
+  background: linear-gradient(0deg, rgb(145, 230, 252) 0%, rgba(102, 122, 232, 0.7456232493) 100%);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.myadmin .mylogo .singout {
+  background-color: rgba(244, 88, 88, 0.842);
+  color: rgb(235, 211, 211);
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.myadmin .mylogo .singout:hover {
+  background-color: rgb(250, 81, 81);
+  color: white;
+}
+.myadmin .mylogo .myicon {
+  font-size: 32px;
+  padding: 0 30px;
+}
+.myadmin .mylogo .admin_input {
+  position: relative;
+}
+.myadmin .mylogo .admin_input i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.myadmin .mylogo .admin_input input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 200px;
+  width: 100%;
+}
+.myadmin .admin_bar {
+  display: flex;
+  padding-top: 100px;
+}
+.myadmin .admin_bar ul {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.253);
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(252, 70, 107, 0.3926820728) 100%);
+}
+.myadmin .admin_bar ul li button {
+  max-width: 200px;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.myadmin .admin_bar ul li button:hover {
+  background: rgba(131, 58, 180, 0.592);
+  color: white;
+}
+@media screen and (max-width: 567px) {
+  .myadmin .admin_bar ul li button {
+    font-size: 10px;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 470px) {
+  .myadmin .admin_bar ul li button {
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .myadmin .admin_bar ul li button {
+    font-size: 3px;
+  }
+}
+.myadmin .admin_bar .MYapi {
+  position: absolute;
+  right: 0;
+  width: 80%;
+}
+.myadmin .admin_bar .MYapi .admin_form {
+  padding: 100px 20px;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+.myadmin .admin_bar .MYapi .admin_form input {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.myadmin .admin_bar .MYapi .admin_form button {
+  max-width: 300px;
+  width: 100%;
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(44, 71, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.myadmin .admin_bar .MYapi .admin_form button:hover {
+  background-color: rgba(27, 88, 13, 0.885);
+  color: white;
+}
+.myadmin .admin_bar .MYapi .api_myform .editform {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.275);
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+  margin: 30px auto;
+}
+.myadmin .admin_bar .MYapi .api_myform .editform h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 300px) {
+  .myadmin .admin_bar .MYapi .api_myform .editform h1 {
+    font-size: 18px;
+  }
+}
+.myadmin .admin_bar .MYapi .api_myform .editform input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.myadmin .admin_bar .MYapi .api_myform .editform button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.myadmin .admin_bar .MYapi .api_myform .editform button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.myadmin .admin_bar .MYapi .api_myform .editform a {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.myadmin .admin_bar .MYapi .api_myform .editform a:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgba(77, 77, 77, 0.684);
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .img {
+  max-width: 100px;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .img img {
+  width: 100%;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  text-align: center;
+  height: 100px;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about p {
+  overflow: auto;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .btn button {
+  padding: 5px 10px;
+  border: 0;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .btn button:hover {
+  background-color: rgba(244, 4, 4, 0.478);
+}
+
+.admin_start .adminlogin {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.275);
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.admin_start .adminlogin h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 100px;
+  color: rgb(3, 134, 7);
+}
+@media screen and (max-width: 300px) {
+  .admin_start .adminlogin h1 {
+    font-size: 18px;
+  }
+}
+.admin_start .adminlogin input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.admin_start .adminlogin button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(234, 11, 11);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.admin_start .adminlogin button:hover {
+  background-color: rgba(4, 82, 16, 0.804);
+  color: white;
 }/*# sourceMappingURL=main.css.map */

@@ -43,7 +43,95 @@ nav {
           display: none;
 
           .position {
+            top: 20px;
             position: relative;
+          }
+
+          .input_item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1%;
+
+            .card {
+              max-width: 300px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 10px;
+
+              .imgdiv {
+                overflow: hidden;
+                width: 100%;
+
+                img {
+                  width: 100%;
+                  height: 200px;
+                  transition: 0.4s;
+
+
+                }
+
+                &:hover {
+                  img {
+                    transform: scale(1.2);
+
+                  }
+                }
+
+                .divbtn {
+                  position: absolute;
+                  background-color: black;
+                  z-index: 2;
+                  bottom: -80px;
+                  transition: 0.4s;
+                  display: flex;
+                  width: 100%;
+
+                  .see {
+                    background-color: black;
+                    color: white;
+                  }
+
+                  button {
+                    width: 50%;
+                    padding: 20px 0;
+
+                    border: 0;
+                  }
+                }
+
+                &:hover {
+                  .divbtn {
+                    bottom: 0;
+
+                    button {
+                      display: block;
+                      padding: 20px 0;
+
+                    }
+                  }
+                }
+              }
+
+              p {
+                color: rgb(148, 8, 8);
+                font-weight: bold;
+                font-size: 24px;
+              }
+
+              h3 {
+                padding: 20px 0;
+                font-size: 22px;
+
+                a {
+                  color: rgb(47, 26, 6);
+                  font-weight: bold;
+
+                }
+              }
+
+            }
           }
         }
 
@@ -56,9 +144,11 @@ nav {
           height: 100%;
           background-color: rgba(0, 0, 0, 0.514);
           display: flex;
+          flex-direction: column;
+          gap: 50px;
           align-items: center;
-          justify-content: center;
           z-index: 4;
+          overflow: auto;
 
           i {
             position: absolute;
@@ -73,6 +163,7 @@ nav {
             color: white;
             border-radius: 20px;
             border: none;
+            max-width: 300px;
           }
 
           button {
@@ -90,6 +181,8 @@ nav {
             }
           }
         }
+
+
       }
 
 
@@ -190,7 +283,8 @@ nav {
           a {
             font-size: 24px;
             transition: 0.9;
-            color: white;
+            color: rgba(255, 255, 255, 0.745);
+            transition: 0.4s;
           }
 
           &:hover {
@@ -198,7 +292,7 @@ nav {
             width: 100px;
 
             a {
-              color: rgb(66, 66, 66);
+              color: rgb(255, 255, 255);
             }
           }
         }
