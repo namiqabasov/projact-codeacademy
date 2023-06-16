@@ -9,7 +9,7 @@ let wishlist_arr = [];
 window.onload = function () {
   if (localStorage.getItem("basket") !== null) {
     basket_arr = JSON.parse(localStorage.getItem("basket"));
-    basget_leng.innerHTML = basketarr.length;
+    basget_leng.innerHTML = basket_arr.length;
   }
   if (localStorage.getItem("wishlist") !== null) {
     wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));

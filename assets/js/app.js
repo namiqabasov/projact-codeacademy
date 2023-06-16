@@ -154,7 +154,7 @@ function cretElement(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
-  btnsee.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  btnsee.href = `itemabout.html#${data.id}`;
 
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
