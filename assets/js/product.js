@@ -44,7 +44,7 @@ function product_creat(data) {
   a.innerText = data.name;
   h3.innerText = data.price + "$";
   p.innerText = data.command;
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  a.href = `itemabout.html#${data.id}`;
 
   //classlist
 
@@ -84,7 +84,7 @@ function hot_product_creat(data) {
   a.innerText = data.name;
   h3.innerText = data.price + "$";
 
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  a.href = `itemabout.html#${data.id}`;
 
   const myp = document.createElement("p");
   myp.innerText = "";
