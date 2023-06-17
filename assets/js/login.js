@@ -17,7 +17,7 @@ async function loginfetch() {
           lastname: element.lastname,
         })
       );
-      location.href = `http://127.0.0.1:5501/my-project/home.html#${element.id}`;
+      location.href = `home.html#${element.id}`;
     }
   });
 }

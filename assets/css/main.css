@@ -2708,4 +2708,272 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
 .admin_start .adminlogin button:hover {
   background-color: rgba(4, 82, 16, 0.804);
   color: white;
+}
+
+main .imgshop {
+  background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  width: 100%;
+  height: 450px;
+  background-size: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .imgshop h2 {
+  color: white;
+  font-size: 32px;
+  border: 2px ridge white;
+  padding: 10px;
+}
+main .product_shopp .mycontainer {
+  display: flex;
+  gap: 2%;
+}
+main .product_shopp .mycontainer .myproduct {
+  width: 70%;
+}
+main .product_shopp .mycontainer .myproduct .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(21, 20, 20, 0.414);
+  padding: 20% 0;
+  background-color: rgba(255, 253, 253, 0.804);
+}
+main .product_shopp .mycontainer .myproduct .card .img_sec {
+  max-width: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+main .product_shopp .mycontainer .myproduct .card .img_sec img {
+  width: 100%;
+  transition: 0.4s;
+}
+main .product_shopp .mycontainer .myproduct .card .img_sec img:hover {
+  transform: scale(1.2);
+}
+main .product_shopp .mycontainer .myproduct .card .about h2 {
+  font-size: 2vw;
+}
+main .product_shopp .mycontainer .myproduct .card .about h2 a {
+  color: rgb(141, 4, 4);
+}
+main .product_shopp .mycontainer .myproduct .card .about h3 {
+  color: black;
+  font-size: 1.5vw;
+}
+main .product_shopp .mycontainer .myproduct .card .about p {
+  color: rgba(7, 7, 7, 0.633);
+  max-width: 500px;
+  font-size: 1vw;
+}
+main .product_shopp .mycontainer .my_filter {
+  width: 30%;
+  border-left: 5px solid burlywood;
+  padding-left: 10px;
+}
+main .product_shopp .mycontainer .my_filter .filter h1 {
+  font-size: 2vw;
+  color: rgb(180, 28, 28);
+  padding-top: 30%;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(29, 28, 28, 0.422);
+  padding: 30% 0;
+  background-color: rgba(255, 253, 253, 0.804);
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .img_sec {
+  max-width: 400px;
+  overflow: hidden;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .img_sec img {
+  width: 100%;
+  height: auto;
+  transition: 0.4s;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .img_sec img:hover {
+  transform: scale(1.2);
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .about h2 {
+  font-size: 2vw;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .about h2 a {
+  color: rgb(141, 4, 4);
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .about h3 {
+  color: black;
+  font-size: 1.5vw;
+}
+main .product_shopp .mycontainer .my_filter .hot_product .card .about p {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 13% 3%;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(254, 0, 0, 0.755);
+  font-size: 2vw;
+}
+
+main .myblog .mycontainer h3 {
+  color: rgb(51, 4, 4);
+  font-size: 3vw;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 100px 0;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+main .myblog .mycontainer .blog_cart h4 {
+  color: black;
+  font-size: 2.5vw;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .myblog .mycontainer .blog_cart ol {
+  list-style-type: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 100px 0;
+}
+main .myblog .mycontainer .blog_cart ol li {
+  font-size: 2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main .contact-section h2 {
+  font-size: 2vw;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+main .contact-section p {
+  font-size: 1vw;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .contact-section .contact-info h3,
+main .contact-section .social-media h3,
+main .contact-section .contact-form h3 {
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+main .contact-section .contact-info p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .contact-section .social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .contact-section .social-media li {
+  margin-bottom: 5px;
+  text-align: center;
+}
+main .contact-section .social-media li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: 0.4s;
+}
+main .contact-section .social-media li a:hover {
+  color: rgb(155, 38, 38);
+}
+main .contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 10px;
+  margin: 0 auto;
+}
+main .contact-section .contact-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+main .contact-section .contact-form input[type=text],
+main .contact-section .contact-form input[type=email],
+main .contact-section .contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+main .contact-section .contact-form textarea {
+  resize: vertical;
+}
+main .contact-section .contact-form button {
+  padding: 10px 20px;
+  background-color: rgb(58, 57, 19);
+  color: rgb(239, 230, 230);
+  border: 0;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+main .contact-section .contact-form button:hover {
+  background-color: rgb(50, 82, 5);
+  color: white;
+}
+
+main .elements-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+main .elements-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+main .elements-section .element {
+  margin-bottom: 40px;
+}
+main .elements-section .element h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+main .elements-section .element button.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+main .elements-section .element input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+main .elements-section .element img {
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

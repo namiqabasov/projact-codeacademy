@@ -3,6 +3,7 @@ const add_btn = document.querySelector(".add_btn ");
 const delet_btn = document.querySelector(".delet_btn ");
 const admin_form = document.querySelector("#my_apiform ");
 const apicard = document.querySelector(".apicard ");
+const api_myform = document.querySelector(".api_myform ");
 const singout = document.querySelector(".singout ");
 
 //admin login
@@ -19,47 +20,11 @@ const adminpass = document.querySelector("#adminpass");
 const admindiv = document.querySelector("#admindiv");
 const adinput = document.querySelector("#adinput");
 
-singout.addEventListener("click", function () {
-  localStorage.removeItem("admin");
-  window.location.reload();
-});
-
-if (localStorage.getItem("admin")) {
-  admindiv.style.cssText = `
-    display:block;
-    `;
-
-  admin_start.style.cssText = `
-    display:none;
-    `;
-}
-adminlogin.addEventListener("submit", function () {
-  if (
-    adminname.value === adminobj.name &&
-    adminpass.value === adminobj.password
-  ) {
-    admindiv.style.cssText = `
-    display:block;
-    `;
-
-    admin_start.style.cssText = `
-    display:none;
-    `;
-    localStorage.setItem(
-      "admin",
-      JSON.stringify({
-        password: adminobj.password,
-        name: adminobj.name,
-      })
-    );
-  }
-});
-
 menu_btn.addEventListener("click", function () {
   admin_form.style.cssText = `
     display:none;
     `;
-  apicard.style.cssText = `
+  api_myform.style.cssText = `
     display:block;
     `;
 });
@@ -67,7 +32,7 @@ add_btn.addEventListener("click", function () {
   admin_form.style.cssText = `
     display:flex;
     `;
-  apicard.style.cssText = `
+  api_myform.style.cssText = `
     display:none;
     `;
 });
@@ -79,6 +44,7 @@ const pimgsrc = document.querySelector("#pimgsrc");
 const pprice = document.querySelector("#pprice");
 const pabout = document.querySelector("#pabout");
 const psael = document.querySelector("#psael");
+const pamount = document.querySelector("#pamount");
 
 async function putfetch(editobj) {
   const res = await fetch(`https://namiq-myapi.onrender.com/${editobj.id}`, {
@@ -97,6 +63,7 @@ const myname = document.querySelector("#name");
 const img = document.querySelector("#img");
 const sale = document.querySelector("#sale");
 const price = document.querySelector("#price");
+const amount = document.querySelector("#amount");
 const command = document.querySelector("#command");
 
 async function postfetch(postobj) {
@@ -109,16 +76,19 @@ async function postfetch(postobj) {
   });
 }
 
-my_apiform.addEventListener("submit", function () {
-  let postobj = {
-    img_src: img.value,
-    name: myname.value,
-    sale: sale.value,
-    price: price.value,
-    command: command.value,
-  };
-  postfetch(postobj);
-});
+function admin_post() {
+  my_apiform.addEventListener("submit", function () {
+    let postobj = {
+      img_src: img.value,
+      name: myname.value,
+      sale: sale.value,
+      price: price.value,
+      amount: amount.value,
+      command: command.value,
+    };
+    postfetch(postobj);
+  });
+}
 
 //creat ucun
 async function myfetch() {
@@ -150,6 +120,7 @@ function creElement(data) {
   const img = document.createElement("img");
   const h2 = document.createElement("h2");
   const h3 = document.createElement("h3");
+  const h4 = document.createElement("h4");
   const p = document.createElement("p");
   const btndelet = document.createElement("button");
   const btnedit = document.createElement("button");
@@ -166,6 +137,7 @@ function creElement(data) {
     pname.value = data.name;
     pabout.value = data.command;
     pprice.value = data.price;
+    pamount.value = data.amount;
     psael.value = data.sale;
 
     editform.addEventListener("submit", function () {
@@ -175,6 +147,7 @@ function creElement(data) {
         name: pname.value,
         sale: psael.value,
         price: pprice.value,
+        amount: pamount.value,
         command: pabout.value,
       };
       putfetch(editobj);
@@ -185,6 +158,7 @@ function creElement(data) {
   img.src = data.img_src;
   h2.innerText = data.name;
   h3.innerText = data.price + "$";
+  h4.innerText = "amount:" + data.amount;
   p.innerText = data.command;
   btndelet.innerText = "DELETE";
   btnedit.innerText = "EDIT";
@@ -197,14 +171,59 @@ function creElement(data) {
 
   //append
   imgdiv.appendChild(img);
-  aboutdiv.append(h2, h3, p);
+  aboutdiv.append(h2, h3, h4, p);
   btndiv.append(btndelet, btnedit);
   mydiv.append(imgdiv, aboutdiv, btndiv);
   apicard.appendChild(mydiv);
 }
-myfetch();
 
-adinput.addEventListener("keyup", function () {
-  apicard.innerHTML = "";
+//giris ucun
+
+singout.addEventListener("click", function () {
+  localStorage.removeItem("admin");
+  window.location.reload();
+});
+
+if (localStorage.getItem("admin")) {
+  admindiv.style.cssText = `
+    display:block;
+    `;
+
+  admin_start.style.cssText = `
+    display:none;
+    `;
+  admin_post();
   myfetch();
+  adinput.addEventListener("keyup", function () {
+    apicard.innerHTML = "";
+    myfetch();
+  });
+}
+adminlogin.addEventListener("submit", function () {
+  if (
+    adminname.value === adminobj.name &&
+    adminpass.value === adminobj.password
+  ) {
+    admindiv.style.cssText = `
+    display:block;
+    `;
+
+    admin_start.style.cssText = `
+    display:none;
+    `;
+    localStorage.setItem(
+      "admin",
+      JSON.stringify({
+        password: adminobj.password,
+        name: adminobj.name,
+      })
+    );
+
+    myfetch();
+    admin_post();
+    adinput.addEventListener("keyup", function () {
+      apicard.innerHTML = "";
+      myfetch();
+    });
+  }
 });

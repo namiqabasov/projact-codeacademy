@@ -86,7 +86,7 @@ function inputCReate(element) {
   myimg.src = element.img_src;
   a.innerHTML = element.name;
   p.innerText = element.price + "$";
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
+  a.href = `itemabout.html#${element.id}`;
 
   creddiv.classList.add("myCreput");
   imgdiv.append(myimg);

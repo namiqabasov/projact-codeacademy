@@ -1,181 +1,162 @@
 main {
+    .imgshop {
+        background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        background-attachment: fixed;
+        width: 100%;
+        height: 450px;
+        background-size: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    .topics {
+        h2 {
+            color: white;
+            font-size: 32px;
+            border: 2px ridge white;
+            padding: 10px;
+        }
+    }
+
+    .product_shopp {
         .mycontainer {
-            .name {
-                padding: 100px 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            display: flex;
+            gap: 2%;
 
-                h2 {
-                    font-size: 44px;
-                    text-align: center;
-                    padding-bottom: 20px;
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                }
+            .myproduct {
+                width: 70%;
 
-                p {
-                    font-size: 20px;
-                    text-align: center;
-                    color: rgba(0, 0, 0, 0.629);
-                    max-width: 600px;
-                }
-            }
-
-            .myaddiction {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-
-                .cards {
+                .card {
                     display: flex;
+                    align-items: center;
                     gap: 20px;
-                    max-width: 600px;
-                    width: 100%;
-                    position: relative;
+                    border-bottom: 1px solid rgba(21, 20, 20, 0.414);
+                    padding: 20% 0;
+                    background-color: rgba(255, 253, 253, 0.804);
 
-                    img {
-                        transition: 0.5s;
-                        width: 100%;
+                    .img_sec {
+                        max-width: 200px;
+                        overflow: hidden;
+                        border-radius: 20px;
 
-                        &:hover {
-                            transform: scale(1.1);
+                        img {
+                            width: 100%;
+                            transition: 0.4s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
                         }
                     }
 
-                    .time {
-                        position: absolute;
-                        left: 0;
-                        background-color: black;
-                        color: white;
-                        padding: 20px;
-                    }
+                    .about {
+                        h2 {
+                            font-size: 2vw;
 
-                    .hilton {
-                        font-size: 18px;
-                        font-weight: bold;
-                        padding: 20px 0;
-                    }
+                            a {
+                                color: rgb(141, 4, 4);
 
-                    .lorem {
-                        padding: 20px 0;
-                    }
+                            }
+                        }
 
-                    .icons {
+                        h3 {
+                            color: black;
+                            font-size: 1.5vw;
+                        }
+
+                        p {
+                            color: rgba(7, 7, 7, 0.633);
+                            max-width: 500px;
+                            font-size: 1vw;
+                        }
+                    }
+                }
+
+            }
+
+            .my_filter {
+                width: 30%;
+                border-left: 5px solid burlywood;
+                padding-left: 10px;
+
+                .filter {
+                    h1 {
+                        font-size: 2vw;
+                        color: rgb(180, 28, 28);
+                        padding-top: 30%;
+                        text-align: center;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    }
+                }
+
+                .hot_product {
+
+
+                    .card {
                         display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        border-bottom: 1px solid rgba(29, 28, 28, 0.422);
+                        padding: 30% 0;
+                        background-color: rgba(255, 253, 253, 0.804);
 
-                        i {
-                            padding-left: 20px;
-                            padding-right: 10px;
+                        .img_sec {
+                            max-width: 400px;
+                            overflow: hidden;
+
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                transition: 0.4s;
+
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+
+                        .about {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+
+                            h2 {
+                                font-size: 2vw;
+
+                                a {
+                                    color: rgb(141, 4, 4);
+
+                                }
+                            }
+
+                            h3 {
+                                color: black;
+                                font-size: 1.5vw;
+                            }
+
+                            p {
+
+                                display: flex;
+                                align-self: center;
+                                justify-content: center;
+                                padding: 13% 3%;
+                                border-radius: 50%;
+                                color: white;
+                                background-color: rgba(254, 0, 0, 0.755);
+                                font-size: 2vw;
+
+                            }
                         }
                     }
                 }
-
-
-
             }
-
-            .btn {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                padding: 80px 0;
-
-                button {
-                    border: 0;
-                    background-color: rgba(2, 137, 199, 0.785);
-                    padding: 15px 30px;
-                    border-radius: 15px;
-                    color: white;
-                    transition: 0.1s;
-                    border: 1px solid white;
-
-
-                    &:hover {
-                        background-color: white;
-                        color: rgba(2, 137, 199, 0.785);
-                        border: 1px solid;
-
-                    }
-                }
-            }
-
 
         }
     }
-
-    @media screen and (max-width:900px) {
-
-        .topics {
-            .mycontainer {
-
-                .myaddiction {
-                    grid-template-columns: 1fr;
-
-                    .cards {
-                        width: 100%;
-                    }
-                }
-            }
-
-
-        }
-    }
-
-    @media screen and (max-width:768px) {
-
-        .topics {
-            .mycontainer {
-
-                .myaddiction {
-                    grid-template-columns: 1fr;
-
-                    .cards {
-                        width: 70%;
-                    }
-                }
-            }
-
-
-        }
-    }
-
-    @media screen and (max-width:468px) {
-
-        .topics {
-            .mycontainer {
-
-                .myaddiction {
-                    grid-template-columns: 1fr;
-
-                    .cards {
-                        width: 20%;
-                    }
-                }
-            }
-
-
-        }
-    }
-
-    @media screen and (max-width:368px) {
-
-        .topics {
-            .mycontainer {
-
-                .myaddiction {
-                    grid-template-columns: 1fr;
-
-                    .cards {
-                        width: 10%;
-                        height: auto;
-                    }
-                }
-            }
-
-
-        }
-    }
-
 }

@@ -30,7 +30,7 @@ basket_arr.forEach((element) => {
   mydiv.classList.add("card");
   myimg.src = element.img_src;
   a.innerHTML = element.name;
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
+  a.href = `itemabout.html#${element.id}`;
   incin.innerHTML = "+";
   secp.innerHTML = element.count;
   decin.innerHTML = "-";

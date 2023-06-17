@@ -1,0 +1,37 @@
+main {
+    .myblog {
+        .mycontainer {
+            h3 {
+                color: rgb(51, 4, 4);
+                font-size: 3vw;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 100px 0;
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .blog_cart {
+                h4 {
+                    color: black;
+                    font-size: 2.5vw;
+                    text-align: center;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+
+                ol {
+                    list-style-type: decimal;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2vw;
+                    padding: 100px 0;
+
+                    li {
+                        font-size: 2vw;
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
