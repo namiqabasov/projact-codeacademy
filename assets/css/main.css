@@ -85,6 +85,7 @@ nav .mycontainer .icons .Search .myinput .input_item .card {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  z-index: 10;
 }
 nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv {
   overflow: hidden;
@@ -135,6 +136,9 @@ nav .mycontainer .icons .Search .myinput .input_item .card h3 {
 nav .mycontainer .icons .Search .myinput .input_item .card h3 a {
   color: rgb(47, 26, 6);
   font-weight: bold;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 nav .mycontainer .icons .Search .activinput {
   display: block;
