@@ -51,7 +51,7 @@ async function myfetch1() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
           infinite: true,
         },
       },
@@ -284,5 +284,3 @@ myfetch1();
 //   // // loginfetch();
 
 // }
-
-
