@@ -102,3 +102,32 @@ searchinput.addEventListener("keyup", function () {
   imputFetch();
   input_item.innerHTML = "";
 });
+
+const mylogin = document.querySelector(".mylogin");
+const mynumber = document.querySelector(".mynumber");
+if (localStorage.getItem("user")) {
+  console.log(JSON.parse(localStorage.getItem("user")));
+  const mail = JSON.parse(localStorage.getItem("user")).mail;
+  const name = JSON.parse(localStorage.getItem("user")).name;
+  const lastname = JSON.parse(localStorage.getItem("user")).lastname;
+
+  mylogin.innerHTML = "";
+  mynumber.innerText = mail;
+
+  const div = document.createElement("div");
+  const btn = document.createElement("button");
+  const h2 = document.createElement("h2");
+  const p = document.createElement("p");
+  h2.innerText = name;
+  p.innerText = lastname;
+  btn.innerText = "SING OUT";
+
+  btn.addEventListener("click", function () {
+    localStorage.removeItem("user");
+    window.location.reload();
+  });
+  div.append(h2, p);
+  mylogin.append(div, btn);
+} else {
+  mylogin.innerHTML = `<a href="login.html?#">login</a>`;
+}
