@@ -18,7 +18,7 @@ const admin_start = document.querySelector(".admin_start");
 const adminname = document.querySelector("#adminname");
 const adminpass = document.querySelector("#adminpass");
 const admindiv = document.querySelector("#admindiv");
-const adinput = document.querySelector("#adinput");
+const adinput = document.querySelector("#ppcatacory");
 
 menu_btn.addEventListener("click", function () {
   admin_form.style.cssText = `
@@ -45,15 +45,20 @@ const pprice = document.querySelector("#pprice");
 const pabout = document.querySelector("#pabout");
 const psael = document.querySelector("#psael");
 const pamount = document.querySelector("#pamount");
+const pcatacory = document.querySelector("#pcatacory");
 
 async function putfetch(editobj) {
-  const res = await fetch(`https://namiq-myapi.onrender.com/${editobj.id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(editobj),
-  });
+  const res = await fetch(
+    `post_api: https://namiq-myapi.onrender.com/
+${editobj.id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editobj),
+    }
+  );
 }
 
 //post ucun
@@ -65,15 +70,20 @@ const sale = document.querySelector("#sale");
 const price = document.querySelector("#price");
 const amount = document.querySelector("#amount");
 const command = document.querySelector("#command");
+const catacory = document.querySelector("#catacory");
 
 async function postfetch(postobj) {
-  const res = await fetch(`https://namiq-myapi.onrender.com/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(postobj),
-  });
+  const res = await fetch(
+    `post_api: https://namiq-myapi.onrender.com/
+`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postobj),
+    }
+  );
 }
 
 function admin_post() {
@@ -85,6 +95,7 @@ function admin_post() {
       price: price.value,
       amount: amount.value,
       command: command.value,
+      catacory: catacory.value,
     };
     postfetch(postobj);
   });
@@ -92,7 +103,8 @@ function admin_post() {
 
 //creat ucun
 async function myfetch() {
-  const res = await fetch(`https://namiq-myapi.onrender.com/`);
+  const res = await fetch(`post_api: https://namiq-myapi.onrender.com/
+`);
   const data = await res.json();
 
   data.forEach((element) => {
@@ -107,9 +119,13 @@ async function myfetch() {
 }
 
 async function myfetchdelet(data) {
-  const res = await fetch(`https://namiq-myapi.onrender.com/${data.id}`, {
-    method: "DELETE",
-  });
+  const res = await fetch(
+    `post_api: https://namiq-myapi.onrender.com/
+${data.id}`,
+    {
+      method: "DELETE",
+    }
+  );
 }
 
 function creElement(data) {
@@ -132,13 +148,14 @@ function creElement(data) {
   });
 
   btnedit.addEventListener("click", function () {
-    document.documentElement.scrollTop = 5000;
+    document.documentElement.scrollTop = 10000;
     pimgsrc.value = data.img_src;
     pname.value = data.name;
     pabout.value = data.command;
     pprice.value = data.price;
     pamount.value = data.amount;
     psael.value = data.sale;
+    ppcatacory.value = data.catacory;
 
     editform.addEventListener("submit", function () {
       let editobj = {
@@ -149,6 +166,7 @@ function creElement(data) {
         price: pprice.value,
         amount: pamount.value,
         command: pabout.value,
+        catacory: ppcatacory.value,
       };
       putfetch(editobj);
     });

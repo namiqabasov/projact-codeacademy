@@ -235,7 +235,7 @@ nav .mycontainer .bars {
     display: none;
   }
   nav .mycontainer .activebar {
-    z-index: 2;
+    z-index: 4;
     opacity: 1;
     display: block;
     position: fixed;
@@ -293,7 +293,7 @@ nav .mycontainer .bars {
   justify-content: space-between;
 }
 .navbox .mycontainer .pod {
-  column-gap: 100px;
+  column-gap: 10px;
 }
 
 @media screen and (max-width: 455px) {
@@ -359,7 +359,6 @@ main {
   padding: 200px 0;
 }
 main .fade {
-  max-width: 1170px;
   margin: 0 auto;
 }
 main .fade .slidecard {
@@ -378,20 +377,20 @@ main .fade .slidecard .easily {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   align-items: start;
 }
 main .fade .slidecard .easily h2 {
   color: brown;
-  font-size: 24px;
+  font-size: 2vw;
   font-weight: bold;
 }
 main .fade .slidecard .easily h1 {
-  font-size: 62px;
+  font-size: 8vw;
   font-weight: bold;
 }
 main .fade .slidecard .easily p {
-  font-size: 16px;
+  font-size: 1.5vw;
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
@@ -411,24 +410,10 @@ main .fade .slidecard .easily button:hover {
 }
 @media screen and (max-width: 480px) {
   main .fade .slidecard .easily {
-    gap: 1%;
-  }
-  main .fade .slidecard .easily h2 {
-    color: brown;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  main .fade .slidecard .easily h1 {
-    font-size: 42px;
-    font-weight: bold;
-  }
-  main .fade .slidecard .easily p {
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
+    gap: 10px;
   }
   main .fade .slidecard .easily button {
-    padding: 10px 20px;
+    padding: 3vw 6vw;
   }
 }
 main .fade .slick-prev {
@@ -511,19 +496,41 @@ main .rooms .mycontainer .myroom .name p {
     align-items: center;
   }
 }
+main .product .mycontainer {
+  padding: 100px 0;
+}
 main .product .mycontainer .recend p {
   text-align: center;
   font-size: 24px;
+  padding: 100px 0;
+}
+main .product .mycontainer .recend .filter_cart {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+main .product .mycontainer .recend .filter_cart button {
+  padding: 10px 20px;
+  border: 0;
+  background-color: rgb(244, 236, 234);
+  color: rgb(223, 141, 141);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+main .product .mycontainer .recend .filter_cart button:hover {
+  background-color: rgb(240, 149, 38);
+  color: rgb(255, 255, 255);
 }
 main .product .mycontainer .mycards {
-  padding-top: 100px;
+  padding-top: 100px 0;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 main .product .mycontainer .mycards .card {
   width: 300px;
+  box-shadow: 10px 8px rgba(0, 0, 0, 0.05), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.1);
 }
 main .product .mycontainer .mycards .card .img {
   position: relative;
@@ -545,7 +552,7 @@ main .product .mycontainer .mycards .card .img .wislis i {
 }
 main .product .mycontainer .mycards .card .img img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   transition: 0.4s;
 }
 main .product .mycontainer .mycards .card .img:hover img {
@@ -595,10 +602,11 @@ main .product .mycontainer .mycards .card .shop .sale {
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 5%;
+  padding: 9% 5%;
   border-radius: 50%;
   color: white;
-  background-color: rgba(247, 125, 125, 0.755);
+  background-color: rgb(255, 0, 0);
+  margin-right: 10px;
 }
 main .product .mycontainer .mycards .card .shop .ptag {
   display: flex;
@@ -657,23 +665,24 @@ main .Discover .mycontainer button:hover {
     font-size: 24px;
   }
 }
-main .Fashion .mycontainer .myname h2 {
+main .Fashion .myname h2 {
   text-align: center;
   font-size: 32px;
   padding: 100px 0;
 }
-main .Fashion .mycontainer .autoplay .card {
+main .Fashion .autoplay .card {
   max-width: 300px;
-  height: auto;
-  padding-right: 1%;
+  height: 300px;
+  box-shadow: 10px 8px rgba(0, 0, 0, 0.05), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
 }
-main .Fashion .mycontainer .autoplay .card .img {
+main .Fashion .autoplay .card .img {
   position: relative;
   transition: 0.4s;
   overflow: hidden;
-  height: auto;
+  height: 200px;
 }
-main .Fashion .mycontainer .autoplay .card .img .wislis {
+main .Fashion .autoplay .card .img .wislis {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -682,18 +691,18 @@ main .Fashion .mycontainer .autoplay .card .img .wislis {
   border: 0;
   font-size: 16px;
 }
-main .Fashion .mycontainer .autoplay .card .img .wislis i {
+main .Fashion .autoplay .card .img .wislis i {
   color: red;
 }
-main .Fashion .mycontainer .autoplay .card .img img {
+main .Fashion .autoplay .card .img img {
   width: 100%;
-  height: auto;
   transition: 0.4s;
+  height: 200px;
 }
-main .Fashion .mycontainer .autoplay .card .img:hover img {
+main .Fashion .autoplay .card .img:hover img {
   transform: scale(1.2);
 }
-main .Fashion .mycontainer .autoplay .card .img .divbtn {
+main .Fashion .autoplay .card .img .divbtn {
   position: absolute;
   background-color: black;
   z-index: 2;
@@ -702,7 +711,7 @@ main .Fashion .mycontainer .autoplay .card .img .divbtn {
   display: flex;
   width: 100%;
 }
-main .Fashion .mycontainer .autoplay .card .img .divbtn .see {
+main .Fashion .autoplay .card .img .divbtn .see {
   background-color: black;
   color: white;
   width: 50%;
@@ -710,77 +719,72 @@ main .Fashion .mycontainer .autoplay .card .img .divbtn .see {
   border: 0;
   font-size: 12px;
 }
-main .Fashion .mycontainer .autoplay .card .img .divbtn .see i {
+main .Fashion .autoplay .card .img .divbtn .see i {
   margin-left: 10px;
 }
-main .Fashion .mycontainer .autoplay .card .img .divbtn .basket {
+main .Fashion .autoplay .card .img .divbtn .basket {
   background-color: rgba(255, 0, 0, 0.575);
   color: black;
 }
-main .Fashion .mycontainer .autoplay .card .img .divbtn button {
+main .Fashion .autoplay .card .img .divbtn button {
   width: 50%;
   padding: 20px 0;
   font-size: 12px;
   border: 0;
 }
-main .Fashion .mycontainer .autoplay .card .img:hover .divbtn {
+main .Fashion .autoplay .card .img:hover .divbtn {
   bottom: 0;
 }
-main .Fashion .mycontainer .autoplay .card .img:hover .divbtn button {
+main .Fashion .autoplay .card .img:hover .divbtn button {
   display: block;
   padding: 20px 0;
 }
-main .Fashion .mycontainer .autoplay .shop {
+main .Fashion .autoplay .shop {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
 }
-main .Fashion .mycontainer .autoplay .shop .sale {
+main .Fashion .autoplay .shop .sale {
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 5%;
+  padding: 7% 3%;
   border-radius: 50%;
   color: white;
-  background-color: rgba(247, 125, 125, 0.755);
+  background-color: rgb(255, 0, 0);
   font-size: 15px;
 }
-main .Fashion .mycontainer .autoplay .shop .ptag {
+main .Fashion .autoplay .shop .ptag {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1%;
 }
-main .Fashion .mycontainer .autoplay .shop .ptag p {
+main .Fashion .autoplay .shop .ptag p {
   color: black;
   font-weight: bold;
   font-size: 18px;
 }
-main .Fashion .mycontainer .autoplay .shop .ptag h2 {
+main .Fashion .autoplay .shop .ptag h2 {
   font-size: 16px;
   color: rgba(247, 125, 125, 0.755);
 }
-@media screen and (max-width: 768px) {
-  main .Fashion .mycontainer .autoplay .shop .sale {
-    display: none;
-  }
-}
-main .Fashion .mycontainer .autoplay .slick-next {
+main .Fashion .autoplay .slick-next {
   opacity: 0;
   cursor: auto;
 }
-main .Fashion .mycontainer .autoplay .slick-prev {
+main .Fashion .autoplay .slick-prev {
   opacity: 0;
   cursor: auto;
 }
-main .Fashion .mycontainer .autoplay .slick-dots {
+main .Fashion .autoplay .slick-dots {
   display: flex;
   justify-content: center;
 }
-main .Fashion .mycontainer .autoplay .slick-dots li {
+main .Fashion .autoplay .slick-dots li {
   padding: 2%;
 }
-main .Fashion .mycontainer .autoplay .slick-dots li button {
+main .Fashion .autoplay .slick-dots li button {
   background-color: rgba(161, 104, 104, 0.774);
   color: rgba(89, 196, 223, 0);
   border: 1px solid rgba(134, 113, 96, 0.774);
@@ -789,10 +793,10 @@ main .Fashion .mycontainer .autoplay .slick-dots li button {
   height: 20px;
   transition: 0.2s;
 }
-main .Fashion .mycontainer .autoplay .slick-dots li button:hover {
+main .Fashion .autoplay .slick-dots li button:hover {
   transform: scale(1.125);
 }
-main .Fashion .mycontainer .autoplay .slick-dots .slick-active button {
+main .Fashion .autoplay .slick-dots .slick-active button {
   background-color: rgb(91, 41, 41);
   background-color: rgb(91, 41, 41);
 }
@@ -815,6 +819,7 @@ main .CUSTOMERS .mycontainer .word {
   text-align: center;
   background-color: rgba(215, 213, 213, 0.545);
   padding: 150px 20px;
+  margin: 20px 0;
 }
 main .CUSTOMERS .mycontainer .word i {
   border: 1px solid black;
@@ -848,6 +853,7 @@ main .CUSTOMERS .mycontainer .SHIPPING {
   text-align: center;
   background-color: rgba(145, 34, 34, 0.812);
   padding: 150px 20px;
+  margin: 20px 0;
 }
 main .CUSTOMERS .mycontainer .SHIPPING h2 {
   font-size: 24px;
@@ -2463,6 +2469,7 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   border: 0;
   border-radius: 10px;
   padding: 10px 20px;
+  margin-top: 10px;
 }
 .myadmin .mylogo .singout:hover {
   background-color: rgb(250, 81, 81);
@@ -2503,6 +2510,7 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   border-right: 1px solid rgba(0, 0, 0, 0.253);
   background: rgb(63, 94, 251);
   background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(252, 70, 107, 0.3926820728) 100%);
+  padding-top: 100px;
 }
 .myadmin .admin_bar ul li button {
   max-width: 200px;
@@ -2839,31 +2847,82 @@ main .product_shopp .mycontainer .my_filter .hot_product .card .about p {
   font-size: 2vw;
 }
 
-main .myblog .mycontainer h3 {
-  color: rgb(51, 4, 4);
-  font-size: 3vw;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 100px 0;
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
+main .myblog {
+  margin-top: 100px;
+  background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/05/service-bg.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  width: 100%;
+  height: 550px;
+  background-size: auto;
 }
-main .myblog .mycontainer .blog_cart h4 {
-  color: black;
-  font-size: 2.5vw;
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-main .myblog .mycontainer .blog_cart ol {
-  list-style-type: decimal;
+main .myblog .mycontainer {
   display: flex;
-  flex-direction: column;
-  gap: 2vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 100px 0;
 }
-main .myblog .mycontainer .blog_cart ol li {
+main .myblog .mycontainer .about_cart {
+  display: flex;
+  gap: 10px;
+  max-width: 350px;
+}
+main .myblog .mycontainer .about_cart i {
+  color: rgba(255, 94, 0, 0.922);
   font-size: 2vw;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .myblog .mycontainer .about_cart h3 {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5vw;
+  padding-bottom: 20px;
+}
+main .myblog .mycontainer .about_cart p {
+  font-size: 1vw;
+  color: white;
+}
+main .secOur {
+  padding: 100px 0;
+}
+main .secOur .mycontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 29px;
+}
+main .secOur .mycontainer h2 {
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+  font-weight: bold;
+}
+main .secOur .mycontainer p {
+  font-size: 1vw;
+  color: rgba(59, 59, 59, 0.758);
+  text-align: center;
+}
+main .newblog {
+  background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/plugins/goodlayers-core/include/images/content-blocked.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  width: 100%;
+  height: 550px;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .newblog h2 {
+  text-align: center;
+  color: white;
+  font-size: 5vw;
 }
 
 main .contact-section h2 {

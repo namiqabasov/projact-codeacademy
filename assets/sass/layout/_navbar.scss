@@ -27,6 +27,7 @@ nav {
       gap: 20px;
       align-items: center;
 
+
       .remove {
         display: none;
       }
@@ -258,7 +259,7 @@ nav {
       }
 
       .activebar {
-        z-index: 2;
+        z-index: 4;
         opacity: 1;
         display: block;
         position: fixed;
@@ -326,7 +327,7 @@ nav {
     justify-content: space-between;
 
     .pod {
-      column-gap: 100px;
+      column-gap: 10px;
     }
   }
 

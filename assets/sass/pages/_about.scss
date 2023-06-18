@@ -1,37 +1,90 @@
 main {
     .myblog {
+        margin-top: 100px;
+        background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/05/service-bg.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        background-attachment: fixed;
+        width: 100%;
+        height: 550px;
+        background-size: auto;
+
         .mycontainer {
-            h3 {
-                color: rgb(51, 4, 4);
-                font-size: 3vw;
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 100px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 100px 0;
+
+            .about_cart {
+                display: flex;
+                gap: 10px;
+                max-width: 350px;
+
+                i {
+                    color: rgba(255, 94, 0, 0.922);
+                    font-size: 2vw;
+                }
+
+                h3 {
+                    color: white;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 1.5vw;
+                    padding-bottom: 20px;
+                }
+
+                p {
+                    font-size: 1vw;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .secOur {
+        padding: 100px 0;
+
+        .mycontainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 29px;
+
+            h2 {
+                color: rgb(0, 0, 0);
+                font-size: 2vw;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 1vw;
+                color: rgba(59, 59, 59, 0.758);
                 text-align: center;
-                max-width: 500px;
-                margin: 0 auto;
             }
+        }
+    }
 
-            .blog_cart {
-                h4 {
-                    color: black;
-                    font-size: 2.5vw;
-                    text-align: center;
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                }
+    .newblog {
+        background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/plugins/goodlayers-core/include/images/content-blocked.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        background-attachment: fixed;
+        width: 100%;
+        height: 550px;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-                ol {
-                    list-style-type: decimal;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2vw;
-                    padding: 100px 0;
-
-                    li {
-                        font-size: 2vw;
-                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    }
-                }
-            }
+        h2 {
+            text-align: center;
+            color: white;
+            font-size: 5vw;
         }
     }
 }

@@ -49,7 +49,7 @@ inputremov.addEventListener("click", function () {
 });
 
 async function imputFetch() {
-  const res = await fetch("https://namiq-myapi.onrender.com/");
+  const res = await fetch("post_api: https://namiq-myapi.onrender.com/  ");
   const data = await res.json();
   data.forEach((element) => {
     if (
@@ -103,8 +103,11 @@ searchinput.addEventListener("keyup", function () {
   input_item.innerHTML = "";
 });
 
+//login ucun
+
 const mylogin = document.querySelector(".mylogin");
 const mynumber = document.querySelector(".mynumber");
+
 if (localStorage.getItem("user")) {
   console.log(JSON.parse(localStorage.getItem("user")));
   const mail = JSON.parse(localStorage.getItem("user")).mail;

@@ -1,9 +1,11 @@
 main {
   padding: 200px 0;
 
+
+
   .fade {
-    max-width: 1170px;
     margin: 0 auto;
+
 
     .slidecard {
       width: 100%;
@@ -23,22 +25,22 @@ main {
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         align-items: start;
 
         h2 {
           color: brown;
-          font-size: 24px;
+          font-size: 2vw;
           font-weight: bold;
         }
 
         h1 {
-          font-size: 62px;
+          font-size: 8vw;
           font-weight: bold;
         }
 
         p {
-          font-size: 16px;
+          font-size: 1.5vw;
           color: rgb(255, 255, 255);
           font-weight: bold;
         }
@@ -62,27 +64,12 @@ main {
 
       @media screen and (max-width: 480px) {
         .easily {
-          gap: 1%;
+          gap: 10px;
 
-          h2 {
-            color: brown;
-            font-size: 16px;
-            font-weight: bold;
-          }
 
-          h1 {
-            font-size: 42px;
-            font-weight: bold;
-          }
-
-          p {
-            font-size: 12px;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-          }
 
           button {
-            padding: 10px 20px;
+            padding: 3vw 6vw;
           }
         }
       }
@@ -188,23 +175,48 @@ main {
 
   .product {
     .mycontainer {
+      padding: 100px 0;
 
       .recend {
         p {
           text-align: center;
           font-size: 24px;
+          padding: 100px 0;
         }
+
+        .filter_cart {
+          display: flex;
+          justify-content: start;
+          gap: 20px;
+
+          button {
+            padding: 10px 20px;
+            border: 0;
+            background-color: rgb(244, 236, 234);
+            color: rgb(223, 141, 141);
+            border-radius: 10px;
+            transition: 0.4s;
+
+            &:hover {
+              background-color: rgb(240, 149, 38);
+              color: rgb(255, 255, 255);
+
+            }
+          }
+        }
+
       }
 
       .mycards {
-        padding-top: 100px;
+        padding-top: 100px 0;
         display: flex;
-        gap: 20px;
+        gap: 30px;
         justify-content: space-around;
         flex-wrap: wrap;
 
         .card {
           width: 300px;
+          box-shadow: 10px 8px rgba(0, 0, 0, 0.050), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.100);
 
           .img {
             position: relative;
@@ -228,7 +240,7 @@ main {
 
             img {
               width: 100%;
-              height: 200px;
+              height: 300px;
               transition: 0.4s;
 
 
@@ -297,14 +309,16 @@ main {
             justify-content: center;
             padding: 20px 0;
 
+
             .sale {
               display: flex;
               align-self: center;
               justify-content: center;
-              padding: 5%;
+              padding: 9% 5%;
               border-radius: 50%;
               color: white;
-              background-color: rgba(247, 125, 125, 0.755);
+              background-color: rgb(255, 0, 0);
+              margin-right: 10px;
             }
 
             .ptag {
@@ -382,197 +396,189 @@ main {
   }
 
   .Fashion {
-    .mycontainer {
-      .myname {
-        h2 {
-          text-align: center;
-          font-size: 32px;
-          padding: 100px 0;
+
+    .myname {
+      h2 {
+        text-align: center;
+        font-size: 32px;
+        padding: 100px 0;
+      }
+    }
+
+    .autoplay {
+      .card {
+        max-width: 300px;
+        height: 300px;
+        box-shadow: 10px 8px rgba(0, 0, 0, 0.050), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.100);
+        margin-left: 10px;
+
+        .img {
+          position: relative;
+          transition: 0.4s;
+          overflow: hidden;
+          height: 200px;
+
+
+          .wislis {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+            background: none;
+            border: 0;
+            font-size: 16px;
+
+            i {
+              color: red;
+            }
+          }
+
+          img {
+            width: 100%;
+            transition: 0.4s;
+            height: 200px;
+
+
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.2);
+
+            }
+          }
+
+          .divbtn {
+            position: absolute;
+            background-color: black;
+            z-index: 2;
+            bottom: -80px;
+            transition: 0.4s;
+            display: flex;
+            width: 100%;
+
+            .see {
+              background-color: black;
+              color: white;
+              width: 50%;
+              padding: 20px 0;
+
+              border: 0;
+              font-size: 12px;
+
+              i {
+                margin-left: 10px;
+              }
+            }
+
+            .basket {
+              background-color: rgba(255, 0, 0, 0.575);
+              color: black;
+            }
+
+            button {
+              width: 50%;
+              padding: 20px 0;
+              font-size: 12px;
+
+              border: 0;
+            }
+          }
+
+          &:hover {
+            .divbtn {
+              bottom: 0;
+
+              button {
+                display: block;
+                padding: 20px 0;
+
+              }
+            }
+          }
         }
       }
 
-      .autoplay {
-        .card {
-          max-width: 300px;
-          height: auto;
-          padding-right: 1%;
+      .shop {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
 
-          .img {
-            position: relative;
-            transition: 0.4s;
-            overflow: hidden;
-            height: auto;
-
-            .wislis {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              z-index: 2;
-              background: none;
-              border: 0;
-              font-size: 16px;
-
-              i {
-                color: red;
-              }
-            }
-
-            img {
-              width: 100%;
-              height: auto;
-              transition: 0.4s;
-
-            }
-
-            &:hover {
-              img {
-                transform: scale(1.2);
-
-              }
-            }
-
-            .divbtn {
-              position: absolute;
-              background-color: black;
-              z-index: 2;
-              bottom: -80px;
-              transition: 0.4s;
-              display: flex;
-              width: 100%;
-
-              .see {
-                background-color: black;
-                color: white;
-                width: 50%;
-                padding: 20px 0;
-
-                border: 0;
-                font-size: 12px;
-
-                i {
-                  margin-left: 10px;
-                }
-              }
-
-              .basket {
-                background-color: rgba(255, 0, 0, 0.575);
-                color: black;
-              }
-
-              button {
-                width: 50%;
-                padding: 20px 0;
-                font-size: 12px;
-
-                border: 0;
-              }
-            }
-
-            &:hover {
-              .divbtn {
-                bottom: 0;
-
-                button {
-                  display: block;
-                  padding: 20px 0;
-
-                }
-              }
-            }
-          }
-        }
-
-        .shop {
+        .sale {
           display: flex;
-          justify-content: space-around;
-          padding: 20px 0;
-
-          .sale {
-            display: flex;
-            align-self: center;
-            justify-content: center;
-            padding: 5%;
-            border-radius: 50%;
-            color: white;
-            background-color: rgba(247, 125, 125, 0.755);
-            font-size: 15px;
-          }
-
-
-
-          .ptag {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1%;
-
-            p {
-              color: black;
-              font-weight: bold;
-              font-size: 18px;
-            }
-
-            h2 {
-              font-size: 16px;
-              color: rgba(247, 125, 125, 0.755);
-            }
-          }
-        }
-
-        @media screen and (max-width:768px) {
-          .shop {
-
-            .sale {
-              display: none;
-            }
-
-          }
-        }
-
-        .slick-next {
-          opacity: 0;
-          cursor: auto;
-        }
-
-        .slick-prev {
-          opacity: 0;
-          cursor: auto;
-        }
-
-        .slick-dots {
-          display: flex;
+          align-self: center;
           justify-content: center;
+          padding: 7% 3%;
+          border-radius: 50%;
+          color: white;
+          background-color: rgb(255, 0, 0);
+          font-size: 15px;
+        }
 
 
 
+        .ptag {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1%;
 
-          li {
-            padding: 2%;
-
-            button {
-              background-color: rgba(161, 104, 104, 0.774);
-              color: rgba(89, 196, 223, 0);
-              border: 1px solid rgba(134, 113, 96, 0.774);
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              transition: 0.2s;
-
-              &:hover {
-                transform: scale(1.125);
-              }
-            }
-
+          p {
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
           }
 
-          .slick-active {
-            button {
-              background-color: rgb(91, 41, 41);
-              background-color: rgb(91, 41, 41);
+          h2 {
+            font-size: 16px;
+            color: rgba(247, 125, 125, 0.755);
+          }
+        }
+      }
+
+
+
+      .slick-next {
+        opacity: 0;
+        cursor: auto;
+      }
+
+      .slick-prev {
+        opacity: 0;
+        cursor: auto;
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+
+
+
+
+        li {
+          padding: 2%;
+
+          button {
+            background-color: rgba(161, 104, 104, 0.774);
+            color: rgba(89, 196, 223, 0);
+            border: 1px solid rgba(134, 113, 96, 0.774);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            transition: 0.2s;
+
+            &:hover {
+              transform: scale(1.125);
             }
           }
 
+        }
 
+        .slick-active {
+          button {
+            background-color: rgb(91, 41, 41);
+            background-color: rgb(91, 41, 41);
+          }
         }
 
 
@@ -580,6 +586,9 @@ main {
 
 
     }
+
+
+
   }
 
 
@@ -602,6 +611,7 @@ main {
         text-align: center;
         background-color: rgba(215, 213, 213, 0.545);
         padding: 150px 20px;
+        margin: 20px 0;
 
         i {
           border: 1px solid black;
@@ -643,6 +653,8 @@ main {
         text-align: center;
         background-color: rgba(145, 34, 34, 0.812);
         padding: 150px 20px;
+
+        margin: 20px 0;
 
         h2 {
           font-size: 24px;
