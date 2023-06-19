@@ -720,6 +720,8 @@ main .Fashion .autoplay .card .img img {
   width: 100%;
   transition: 0.4s;
   height: auto;
+  position: relative;
+  top: -30px;
 }
 main .Fashion .autoplay .card .img:hover img {
   transform: scale(1.2);

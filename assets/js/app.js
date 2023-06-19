@@ -269,6 +269,7 @@ function cretElement(data) {
 
   // classname
   carddiv.classList.add("card");
+  carddiv.classList.add("cardfillret");
   imgdiv.classList.add("img");
   shopdiv.classList.add("shop");
   btndiv.classList.add("divbtn");
@@ -347,7 +348,6 @@ function cretElement1(data) {
 
   // classname
   carddiv.classList.add("card");
-
   imgdiv.classList.add("img");
   shopdiv.classList.add("shop");
   btndiv.classList.add("divbtn");
@@ -419,7 +419,7 @@ const showall = document.querySelector(".showall");
 //filter ucun
 
 man_btn.addEventListener("click", function () {
-  document.querySelectorAll(".card").forEach((element) => {
+  document.querySelectorAll(".cardfillret").forEach((element) => {
     element.style.display = "none";
   });
   document.querySelectorAll(".man").forEach((element) => {
@@ -427,7 +427,7 @@ man_btn.addEventListener("click", function () {
   });
 });
 woman_btn.addEventListener("click", function () {
-  document.querySelectorAll(".card").forEach((element) => {
+  document.querySelectorAll(".cardfillret").forEach((element) => {
     element.style.display = "none";
   });
   document.querySelectorAll(".woman").forEach((element) => {
@@ -435,7 +435,7 @@ woman_btn.addEventListener("click", function () {
   });
 });
 child_btn.addEventListener("click", function () {
-  document.querySelectorAll(".card").forEach((element) => {
+  document.querySelectorAll(".cardfillret").forEach((element) => {
     element.style.display = "none";
   });
   document.querySelectorAll(".child").forEach((element) => {
@@ -443,12 +443,12 @@ child_btn.addEventListener("click", function () {
   });
 });
 showall.addEventListener("click", function () {
-  document.querySelectorAll(".card").forEach((element) => {
+  document.querySelectorAll(".cardfillret").forEach((element) => {
     element.style.display = "block";
   });
 });
 hous_btn.addEventListener("click", function () {
-  document.querySelectorAll(".card").forEach((element) => {
+  document.querySelectorAll(".cardfillret").forEach((element) => {
     element.style.display = "none";
   });
   document.querySelectorAll(".house").forEach((element) => {
