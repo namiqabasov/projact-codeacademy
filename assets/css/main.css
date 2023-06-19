@@ -66,6 +66,9 @@ nav .mycontainer .icons {
   align-items: center;
   padding: 0 20px;
 }
+nav .mycontainer .icons .Searchi {
+  cursor: pointer;
+}
 nav .mycontainer .icons .Search .myinput {
   display: none;
 }
@@ -90,10 +93,11 @@ nav .mycontainer .icons .Search .myinput .input_item .card {
 nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv {
   overflow: hidden;
   width: 100%;
+  height: 200px;
 }
 nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv img {
   width: 100%;
-  height: 200px;
+  height: auto;
   transition: 0.4s;
 }
 nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover img {
@@ -147,7 +151,7 @@ nav .mycontainer .icons .Search .activinput {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.514);
+  background-color: rgba(0, 0, 0, 0.745);
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -244,7 +248,7 @@ nav .mycontainer .bars {
     width: 100%;
     height: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.685);
+    background-color: rgba(0, 0, 0, 0.792);
   }
   nav .mycontainer .activebar .remove {
     color: white;
@@ -260,16 +264,19 @@ nav .mycontainer .bars {
     display: block;
     transition: 0.7s;
     width: 0;
+    padding: 20px 5px;
+    border-radius: 5px;
   }
   nav .mycontainer .activebar li a {
     font-size: 24px;
     transition: 0.9;
     color: rgba(255, 255, 255, 0.745);
     transition: 0.4s;
+    padding: 10px;
   }
   nav .mycontainer .activebar li:hover {
     background-color: rgba(0, 217, 255, 0.507);
-    width: 100px;
+    width: 150px;
   }
   nav .mycontainer .activebar li:hover a {
     color: rgb(255, 255, 255);
@@ -324,7 +331,7 @@ header .logindiv {
 }
 header .logindiv .mynumber p {
   color: rgb(55, 5, 83);
-  font-size: 24px;
+  font-size: 44px;
 }
 header .logindiv .mylogin {
   display: flex;
@@ -332,15 +339,16 @@ header .logindiv .mylogin {
   gap: 10px;
 }
 header .logindiv .mylogin a {
-  color: rgba(21, 157, 0, 0.562);
+  color: rgba(40, 40, 38, 0.708);
   transition: 0.4s;
   font-size: 24px;
-  padding: 5px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
-  background-color: rgba(4, 39, 120, 0.814);
+  background-color: rgba(205, 219, 250, 0.814);
 }
 header .logindiv .mylogin a:hover {
-  color: rgb(21, 157, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.814);
 }
 header .logindiv .mylogin button {
   border: 0;
@@ -372,13 +380,15 @@ main .fade .slidecard img {
 }
 main .fade .slidecard .easily {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: start;
+  opacity: 0;
+  transition: 0.5s;
 }
 main .fade .slidecard .easily h2 {
   color: brown;
@@ -478,6 +488,7 @@ main .rooms .mycontainer .myroom {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 main .rooms .mycontainer .myroom img {
   width: 100%;
@@ -490,7 +501,7 @@ main .rooms .mycontainer .myroom .name p {
   color: white;
   font-size: 200%;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   main .rooms .mycontainer {
     flex-direction: column;
     align-items: center;
@@ -500,14 +511,22 @@ main .product .mycontainer {
   padding: 100px 0;
 }
 main .product .mycontainer .recend p {
+  color: black;
   text-align: center;
   font-size: 24px;
   padding: 100px 0;
 }
+main .product .mycontainer .recend h2 {
+  padding: 10px;
+  color: rgb(62, 60, 60);
+  font-size: 24px;
+}
 main .product .mycontainer .recend .filter_cart {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   gap: 20px;
+  padding: 10px;
 }
 main .product .mycontainer .recend .filter_cart button {
   padding: 10px 20px;
@@ -516,6 +535,7 @@ main .product .mycontainer .recend .filter_cart button {
   color: rgb(223, 141, 141);
   border-radius: 10px;
   transition: 0.4s;
+  margin-top: 20px;
 }
 main .product .mycontainer .recend .filter_cart button:hover {
   background-color: rgb(240, 149, 38);
@@ -527,6 +547,8 @@ main .product .mycontainer .mycards {
   gap: 30px;
   justify-content: space-around;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: 0.4s;
 }
 main .product .mycontainer .mycards .card {
   width: 300px;
@@ -552,7 +574,7 @@ main .product .mycontainer .mycards .card .img .wislis i {
 }
 main .product .mycontainer .mycards .card .img img {
   width: 100%;
-  height: 300px;
+  height: auto;
   transition: 0.4s;
 }
 main .product .mycontainer .mycards .card .img:hover img {
@@ -697,7 +719,7 @@ main .Fashion .autoplay .card .img .wislis i {
 main .Fashion .autoplay .card .img img {
   width: 100%;
   transition: 0.4s;
-  height: 200px;
+  height: auto;
 }
 main .Fashion .autoplay .card .img:hover img {
   transform: scale(1.2);
@@ -741,8 +763,9 @@ main .Fashion .autoplay .card .img:hover .divbtn button {
 }
 main .Fashion .autoplay .shop {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px 0;
+  gap: 10px;
 }
 main .Fashion .autoplay .shop .sale {
   display: flex;
@@ -1993,27 +2016,31 @@ main .topics .mycontainer .myaddiction .cards {
 main .topics .mycontainer .myaddiction .cards img {
   transition: 0.5s;
   width: 100%;
+  height: 20vw;
 }
 main .topics .mycontainer .myaddiction .cards img:hover {
   transform: scale(1.1);
 }
 main .topics .mycontainer .myaddiction .cards .time {
+  font-size: 1.3vw;
   position: absolute;
   left: 0;
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 2vw;
 }
 main .topics .mycontainer .myaddiction .cards .hilton {
-  font-size: 18px;
+  font-size: 1.5vw;
   font-weight: bold;
   padding: 20px 0;
 }
 main .topics .mycontainer .myaddiction .cards .lorem {
   padding: 20px 0;
+  font-size: 1.3vw;
 }
 main .topics .mycontainer .myaddiction .cards .icons {
   display: flex;
+  font-size: 1.5vw;
 }
 main .topics .mycontainer .myaddiction .cards .icons i {
   padding-left: 20px;
@@ -2045,6 +2072,7 @@ main .topics .mycontainer .btn button:hover {
   }
   main .topics .mycontainer .myaddiction .cards {
     width: 100%;
+    height: auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2053,6 +2081,7 @@ main .topics .mycontainer .btn button:hover {
   }
   main .topics .mycontainer .myaddiction .cards {
     width: 70%;
+    height: auto;
   }
 }
 @media screen and (max-width: 468px) {
@@ -2061,6 +2090,7 @@ main .topics .mycontainer .btn button:hover {
   }
   main .topics .mycontainer .myaddiction .cards {
     width: 20%;
+    height: auto;
   }
 }
 @media screen and (max-width: 368px) {
@@ -2071,6 +2101,17 @@ main .topics .mycontainer .btn button:hover {
     width: 10%;
     height: auto;
   }
+}
+main .mycontainer .unique h3 {
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+  padding: 30px;
+}
+main .mycontainer .blog_cart h4 {
+  color: white;
+  font-size: 1.5vw;
+  padding: 30px;
 }
 
 main .total {
@@ -2098,14 +2139,17 @@ main .Basgetcard .card {
 main .Basgetcard .card .imgdiv {
   overflow: hidden;
   width: 100%;
+  height: 200px;
 }
 main .Basgetcard .card .imgdiv img {
   width: 100%;
-  height: 200px;
   transition: 0.4s;
+  height: auto;
+  position: relative;
+  top: -30px;
 }
 main .Basgetcard .card .imgdiv:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 main .Basgetcard .card .imgdiv .divbtn {
   position: absolute;
@@ -2246,14 +2290,17 @@ main .mycontainer .Wishlistcard .card {
 main .mycontainer .Wishlistcard .card .imgdiv {
   overflow: hidden;
   width: 100%;
+  height: 200px;
 }
 main .mycontainer .Wishlistcard .card .imgdiv img {
   width: 100%;
-  height: 200px;
+  height: auto;
   transition: 0.4s;
+  position: relative;
+  top: -30px;
 }
 main .mycontainer .Wishlistcard .card .imgdiv:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 main .mycontainer .Wishlistcard .card .imgdiv .divbtn {
   position: absolute;
@@ -2454,26 +2501,34 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   display: none;
 }
 .myadmin .mylogo {
-  background: rgb(145, 230, 252);
-  background: linear-gradient(0deg, rgb(145, 230, 252) 0%, rgba(102, 122, 232, 0.7456232493) 100%);
+  background: #FC354C;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(10, 191, 188, 0.5294117647), #FC354C);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0abfbc, #fc354c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   position: fixed;
   width: 100%;
   z-index: 3;
 }
 .myadmin .mylogo .singout {
-  background-color: rgba(244, 88, 88, 0.842);
-  color: rgb(235, 211, 211);
+  background-color: rgba(255, 255, 255, 0.842);
+  color: rgb(35, 34, 34);
   border: 0;
   border-radius: 10px;
   padding: 10px 20px;
   margin-top: 10px;
+  transition: 0.4s;
+  font-weight: bold;
 }
 .myadmin .mylogo .singout:hover {
-  background-color: rgb(250, 81, 81);
-  color: white;
+  background-color: rgb(0, 153, 255);
+  color: rgb(0, 0, 0);
 }
 .myadmin .mylogo .myicon {
   font-size: 32px;
@@ -2492,15 +2547,29 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   border-radius: 20px;
   max-width: 200px;
   width: 100%;
+  border: 0;
 }
 .myadmin .admin_bar {
   display: flex;
-  padding-top: 100px;
+}
+.myadmin .admin_bar i {
+  color: #eb9cb6;
+  padding: 0 20px;
+  font-size: 3vw;
+  transition: 0.4s;
+}
+.myadmin .admin_bar i:hover {
+  color: #d53369;
+  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #cbad6d, #d53369);
+  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #cbad6d, #d53369);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .myadmin .admin_bar ul {
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 0px;
   width: 20%;
   height: 100%;
   display: flex;
@@ -2508,8 +2577,12 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   gap: 20px;
   padding: 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.253);
-  background: rgb(63, 94, 251);
-  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(252, 70, 107, 0.3926820728) 100%);
+  background: #16222A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding-top: 100px;
 }
 .myadmin .admin_bar ul li button {
@@ -2543,22 +2616,37 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
     font-size: 3px;
   }
 }
+@media screen and (max-width: 450px) {
+  .myadmin .admin_bar ul {
+    padding: 50% 0;
+  }
+}
 .myadmin .admin_bar .MYapi {
   position: absolute;
   right: 0;
   width: 80%;
+  background-color: rgb(50, 48, 48);
 }
 .myadmin .admin_bar .MYapi .admin_form {
   padding: 100px 20px;
   flex-direction: column;
   align-items: center;
   display: none;
+  background-color: white;
+}
+.myadmin .admin_bar .MYapi .admin_form label {
+  font-size: 24px;
+}
+@media screen and (max-width: 450px) {
+  .myadmin .admin_bar .MYapi .admin_form label {
+    font-size: 5vw;
+  }
 }
 .myadmin .admin_bar .MYapi .admin_form input {
   max-width: 500px;
   width: 100%;
   margin-bottom: 20px;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 3px;
   border: 1px solid rgba(63, 61, 61, 0.359);
   box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
@@ -2580,17 +2668,18 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   background-color: rgba(27, 88, 13, 0.885);
   color: white;
 }
+.myadmin .admin_bar .MYapi .api_myform {
+  padding-top: 100px;
+}
 .myadmin .admin_bar .MYapi .api_myform .editform {
   padding: 100px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.275);
-  max-width: 600px;
   width: 100%;
   background-color: white;
   box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
-  margin: 30px auto;
 }
 .myadmin .admin_bar .MYapi .api_myform .editform h1 {
   text-align: center;
@@ -2600,16 +2689,24 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
 }
 @media screen and (max-width: 300px) {
   .myadmin .admin_bar .MYapi .api_myform .editform h1 {
-    font-size: 18px;
+    font-size: 8vw;
+  }
+  .myadmin .admin_bar .MYapi .api_myform .editform label {
+    font-size: 5vw;
   }
 }
+.myadmin .admin_bar .MYapi .api_myform .editform label {
+  text-align: center;
+  padding-bottom: 2%;
+}
 .myadmin .admin_bar .MYapi .api_myform .editform input {
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   margin-bottom: 20px;
-  padding: 10px 15px;
+  padding: 15px 30px;
   border-radius: 3px;
   border: 1px solid rgba(63, 61, 61, 0.359);
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
 }
 .myadmin .admin_bar .MYapi .api_myform .editform button {
   padding: 15px 30px;
@@ -2643,12 +2740,17 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
   padding: 10px;
   margin: 10px;
-  border: 1px solid rgba(77, 77, 77, 0.684);
+  border-bottom: 5px solid rgb(243, 190, 43);
+  height: auto;
 }
 .myadmin .admin_bar .MYapi .api_myform .apicard .cart .img {
-  max-width: 100px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .myadmin .admin_bar .MYapi .api_myform .apicard .cart .img img {
   width: 100%;
@@ -2657,16 +2759,39 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
-  height: 100px;
+  height: auto;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h2,
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h3,
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h4,
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h5 {
+  color: white;
+  font-weight: bold;
 }
 .myadmin .admin_bar .MYapi .api_myform .apicard .cart .about p {
   overflow: auto;
+  color: rgba(255, 255, 255, 0.673);
+  font-size: 1.5vw;
+  height: 100px;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h2 {
+  font-size: 3vw;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h3 {
+  font-size: 2.5vw;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h4 {
+  font-size: 2vw;
+}
+.myadmin .admin_bar .MYapi .api_myform .apicard .cart .about h5 {
+  font-size: 1.5vw;
 }
 .myadmin .admin_bar .MYapi .api_myform .apicard .cart .btn {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   padding-left: 10px;
 }
@@ -2678,6 +2803,21 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
 }
 .myadmin .admin_bar .MYapi .api_myform .apicard .cart .btn button:hover {
   background-color: rgba(244, 4, 4, 0.478);
+}
+@media screen and (max-width: 768px) {
+  .myadmin .admin_bar .MYapi .api_myform .apicard {
+    padding-top: 50px;
+  }
+  .myadmin .admin_bar .MYapi .api_myform .apicard .cart {
+    flex-direction: column;
+    align-items: center;
+  }
+  .myadmin .admin_bar .MYapi .api_myform .apicard .cart p {
+    max-width: 200px;
+  }
+  .myadmin .admin_bar .MYapi .api_myform .apicard .cart .img img {
+    width: 20vw;
+  }
 }
 
 .admin_start .adminlogin {
@@ -2925,75 +3065,71 @@ main .newblog h2 {
   font-size: 5vw;
 }
 
-main .contact-section h2 {
-  font-size: 2vw;
-  margin-bottom: 10px;
-  text-align: center;
+main .contact_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+main .contact_section .about_contact {
   padding: 100px 0;
+  width: 50%;
 }
-main .contact-section p {
-  font-size: 1vw;
-  margin-bottom: 20px;
-  text-align: center;
-}
-main .contact-section .contact-info h3,
-main .contact-section .social-media h3,
-main .contact-section .contact-form h3 {
+main .contact_section .contact-info h3,
+main .contact_section .social-media h3,
+main .contact_section .contact-form h3 {
   font-size: 1.5vw;
   margin-bottom: 10px;
-  text-align: center;
-  padding: 100px 0;
+  padding: 20px 0;
 }
-main .contact-section .contact-info p {
+main .contact_section .contact-info p {
   margin-bottom: 10px;
-  text-align: center;
 }
-main .contact-section .social-media ul {
+main .contact_section .social-media ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
-main .contact-section .social-media li {
+main .contact_section .social-media li {
   margin-bottom: 5px;
   text-align: center;
 }
-main .contact-section .social-media li a {
+main .contact_section .social-media li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
   transition: 0.4s;
 }
-main .contact-section .social-media li a:hover {
+main .contact_section .social-media li a:hover {
   color: rgb(155, 38, 38);
 }
-main .contact-section .contact-form {
+main .contact_section .contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   padding: 10px;
   margin: 0 auto;
+  width: 50%;
 }
-main .contact-section .contact-form label {
+main .contact_section .contact-form label {
   display: block;
   font-size: 16px;
   margin-bottom: 5px;
 }
-main .contact-section .contact-form input[type=text],
-main .contact-section .contact-form input[type=email],
-main .contact-section .contact-form textarea {
+main .contact_section .contact-form input[type=text],
+main .contact_section .contact-form input[type=email],
+main .contact_section .contact-form textarea {
   width: 100%;
   padding: 8px;
   font-size: 14px;
   margin-bottom: 10px;
 }
-main .contact-section .contact-form textarea {
+main .contact_section .contact-form textarea {
   resize: vertical;
 }
-main .contact-section .contact-form button {
+main .contact_section .contact-form button {
   padding: 10px 20px;
   background-color: rgb(58, 57, 19);
   color: rgb(239, 230, 230);
@@ -3001,9 +3137,14 @@ main .contact-section .contact-form button {
   border-radius: 5px;
   transition: 0.4s;
 }
-main .contact-section .contact-form button:hover {
+main .contact_section .contact-form button:hover {
   background-color: rgb(50, 82, 5);
   color: white;
+}
+@media screen and (max-width: 768px) {
+  main .contact_section {
+    flex-direction: column;
+  }
 }
 
 main .elements-section {

@@ -1,19 +1,14 @@
 main {
-    .contact-section {
+    .contact_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
 
-        h2 {
-            font-size: 2vw;
-            margin-bottom: 10px;
-            text-align: center;
+        .about_contact {
             padding: 100px 0;
+            width: 50%;
         }
-
-        p {
-            font-size: 1vw;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
 
         .contact-info,
         .social-media,
@@ -21,15 +16,13 @@ main {
             h3 {
                 font-size: 1.5vw;
                 margin-bottom: 10px;
-                text-align: center;
-                padding: 100px 0;
+                padding: 20px 0;
             }
         }
 
         .contact-info {
             p {
                 margin-bottom: 10px;
-                text-align: center;
             }
         }
 
@@ -39,7 +32,6 @@ main {
                 padding: 0;
                 margin: 0;
                 display: flex;
-                justify-content: center;
                 flex-wrap: wrap;
                 gap: 20px;
             }
@@ -65,9 +57,9 @@ main {
         .contact-form {
             display: flex;
             flex-direction: column;
-            max-width: 600px;
             padding: 10px;
             margin: 0 auto;
+            width: 50%;
 
             label {
                 display: block;
@@ -102,6 +94,12 @@ main {
 
                 }
             }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .contact_section {
+            flex-direction: column;
         }
     }
 

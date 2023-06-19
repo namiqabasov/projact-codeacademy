@@ -18,7 +18,7 @@ const admin_start = document.querySelector(".admin_start");
 const adminname = document.querySelector("#adminname");
 const adminpass = document.querySelector("#adminpass");
 const admindiv = document.querySelector("#admindiv");
-const adinput = document.querySelector("#ppcatacory");
+const adinput = document.querySelector("#adinput");
 
 menu_btn.addEventListener("click", function () {
   admin_form.style.cssText = `
@@ -48,17 +48,13 @@ const pamount = document.querySelector("#pamount");
 const pcatacory = document.querySelector("#pcatacory");
 
 async function putfetch(editobj) {
-  const res = await fetch(
-    `post_api: https://namiq-myapi.onrender.com/
-${editobj.id}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(editobj),
-    }
-  );
+  const res = await fetch(`https://namiq-myapi.onrender.com/${editobj.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(editobj),
+  });
 }
 
 //post ucun
@@ -73,17 +69,13 @@ const command = document.querySelector("#command");
 const catacory = document.querySelector("#catacory");
 
 async function postfetch(postobj) {
-  const res = await fetch(
-    `post_api: https://namiq-myapi.onrender.com/
-`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(postobj),
-    }
-  );
+  const res = await fetch(`https://namiq-myapi.onrender.com/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postobj),
+  });
 }
 
 function admin_post() {
@@ -103,8 +95,7 @@ function admin_post() {
 
 //creat ucun
 async function myfetch() {
-  const res = await fetch(`post_api: https://namiq-myapi.onrender.com/
-`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await res.json();
 
   data.forEach((element) => {
@@ -119,13 +110,9 @@ async function myfetch() {
 }
 
 async function myfetchdelet(data) {
-  const res = await fetch(
-    `post_api: https://namiq-myapi.onrender.com/
-${data.id}`,
-    {
-      method: "DELETE",
-    }
-  );
+  const res = await fetch(`https://namiq-myapi.onrender.com/${data.id}`, {
+    method: "DELETE",
+  });
 }
 
 function creElement(data) {
@@ -136,6 +123,7 @@ function creElement(data) {
   const img = document.createElement("img");
   const h2 = document.createElement("h2");
   const h3 = document.createElement("h3");
+  const catacoryh5 = document.createElement("h3");
   const h4 = document.createElement("h4");
   const p = document.createElement("p");
   const btndelet = document.createElement("button");
@@ -148,14 +136,14 @@ function creElement(data) {
   });
 
   btnedit.addEventListener("click", function () {
-    document.documentElement.scrollTop = 10000;
+    document.documentElement.scrollTop = 100000;
     pimgsrc.value = data.img_src;
     pname.value = data.name;
     pabout.value = data.command;
     pprice.value = data.price;
     pamount.value = data.amount;
     psael.value = data.sale;
-    ppcatacory.value = data.catacory;
+    pcatacory.value = data.catacory;
 
     editform.addEventListener("submit", function () {
       let editobj = {
@@ -166,7 +154,7 @@ function creElement(data) {
         price: pprice.value,
         amount: pamount.value,
         command: pabout.value,
-        catacory: ppcatacory.value,
+        catacory: pcatacory.value,
       };
       putfetch(editobj);
     });
@@ -175,8 +163,9 @@ function creElement(data) {
   // innertext
   img.src = data.img_src;
   h2.innerText = data.name;
-  h3.innerText = data.price + "$";
+  h3.innerText = "PRICE:" + data.price + "$";
   h4.innerText = "amount:" + data.amount;
+  catacoryh5.innerText = "catacory:" + data.catacory;
   p.innerText = data.command;
   btndelet.innerText = "DELETE";
   btnedit.innerText = "EDIT";
@@ -189,7 +178,7 @@ function creElement(data) {
 
   //append
   imgdiv.appendChild(img);
-  aboutdiv.append(h2, h3, h4, p);
+  aboutdiv.append(h2, h3, catacoryh5, h4, p);
   btndiv.append(btndelet, btnedit);
   mydiv.append(imgdiv, aboutdiv, btndiv);
   apicard.appendChild(mydiv);

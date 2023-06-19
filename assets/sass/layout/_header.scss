@@ -17,7 +17,7 @@ header {
         .mynumber {
             p {
                 color: rgb(55, 5, 83);
-                font-size: 24px;
+                font-size: 44px;
             }
         }
 
@@ -27,15 +27,18 @@ header {
             gap: 10px;
 
             a {
-                color: rgba(21, 157, 0, 0.562);
+                color: rgba(40, 40, 38, 0.708);
                 transition: 0.4s;
                 font-size: 24px;
-                padding: 5px 30px;
+                padding: 10px 30px;
                 border-radius: 10px;
-                background-color: rgba(4, 39, 120, 0.814);
+                background-color: rgba(205, 219, 250, 0.814);
 
                 &:hover {
-                    color: rgb(21, 157, 0);
+                    color: rgb(0, 0, 0);
+
+                    background-color: rgba(255, 255, 255, 0.814);
+
                 }
             }
 

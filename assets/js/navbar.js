@@ -41,6 +41,7 @@ const myinput = document.querySelector(".myinput");
 const inputremov = document.querySelector(".inputremov");
 Searchi.addEventListener("click", function () {
   myinput.classList.add("activinput");
+  imputFetch();
 });
 inputremov.addEventListener("click", function () {
   myinput.classList.remove("activinput");
@@ -49,7 +50,7 @@ inputremov.addEventListener("click", function () {
 });
 
 async function imputFetch() {
-  const res = await fetch("post_api: https://namiq-myapi.onrender.com/  ");
+  const res = await fetch("https://namiq-myapi.onrender.com/");
   const data = await res.json();
   data.forEach((element) => {
     if (
@@ -97,10 +98,9 @@ function inputCReate(element) {
 }
 
 const position = document.querySelector(".position");
-
 searchinput.addEventListener("keyup", function () {
-  imputFetch();
   input_item.innerHTML = "";
+  imputFetch();
 });
 
 //login ucun

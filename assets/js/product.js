@@ -22,8 +22,7 @@ const myproduct = document.querySelector(".myproduct");
 const hot_product = document.querySelector(".hot_product");
 
 async function product_fetch() {
-  const res = await fetch(`post_api: https://namiq-myapi.onrender.com/
-`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await res.json();
   data.forEach((element) => {
     product_creat(element);
@@ -62,8 +61,7 @@ function product_creat(data) {
 }
 
 async function hot_product_fetch() {
-  const res = await fetch(`post_api: https://namiq-myapi.onrender.com/
-`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/`);
   const data = await res.json();
   data.forEach((element) => {
     if (element.sale === "SALE!") {
