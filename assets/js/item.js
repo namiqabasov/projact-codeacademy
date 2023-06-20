@@ -22,7 +22,7 @@ const myseebox = document.querySelector(".myseebox");
 
 async function myfetchid() {
   const response = await fetch(
-    `https://namiq-myapi.onrender.com/${window.location.hash.slice(1)}`
+    `http://localhost:3000/post/${window.location.hash.slice(1)}`
   );
   const data = await response.json();
 
@@ -66,6 +66,21 @@ function mycreate(data) {
   input.value = 1;
   btn.innerText = "ADD TO CART";
 
+  //classlist
+
+  divimg.classList.add("image-container");
+  img.classList.add("zoom-image");
+  img.addEventListener("mousemove", zoomImage);
+
+  function zoomImage(event) {
+    const { left, top, width, height } = img.getBoundingClientRect();
+
+    const x = (event.clientX - left) / width;
+    const y = (event.clientY - top) / height;
+
+    img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+  }
+
   divimg.appendChild(img);
   btndiv.append(input, btn);
   divabout.append(h2, h3, p, btndiv);
@@ -74,3 +89,5 @@ function mycreate(data) {
 }
 
 myfetchid();
+
+//img zoom ucun

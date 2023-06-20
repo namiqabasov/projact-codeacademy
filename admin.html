@@ -20,9 +20,14 @@
     <div class="bigdiv">
       <div class="myadmin" id="admindiv">
         <div class="mylogo">
-          <div>
+          <div class="icon_div">
             <i class="myicon fa-solid fa-gears"></i>
             <button class="singout">SING OUT</button>
+            <button class="admin_registr">
+              <a id="admin_register_link" href=""
+                ><i class="fa-solid fa-id-card"></i
+              ></a>
+            </button>
           </div>
           <div class="admin_input">
             <input type="text" id="adinput" />
@@ -101,6 +106,7 @@
           <input type="text" id="adminname" />
           <label for="adminpass">PASSWORD</label>
           <input type="password" id="adminpass" />
+          <p class="worng"></p>
           <button type="submit" class="mybtn">LOGIN</button>
         </form>
       </div>

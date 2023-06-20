@@ -348,6 +348,7 @@ function cretElement1(data) {
 
   // classname
   carddiv.classList.add("card");
+
   imgdiv.classList.add("img");
   shopdiv.classList.add("shop");
   btndiv.classList.add("divbtn");
@@ -388,7 +389,7 @@ myfetch1();
 // } else {
 //   // async function loginfetch() {
 //   //   const res = await fetch(
-//   //     `https://namiq-myapi2.onrender.com/${window.location.hash.slice(1)}`
+//   //     `https://namiq-myapi.onrender.com/ash.slice(1)}`
 //   //   );
 //   //   const data = await res.json();
 //   //   mynumber.innerText = data.mail;

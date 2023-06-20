@@ -7,8 +7,10 @@ main {
     margin: 0 auto;
 
 
+
     .slidecard {
       width: 100%;
+      height: 40vw;
 
       img {
         width: 100%;
@@ -17,6 +19,74 @@ main {
 
       display: flex;
       position: relative;
+
+      .easily {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        opacity: 0;
+        transition: 0.5s;
+
+        h2 {
+          color: brown;
+          font-size: 2vw;
+          font-weight: bold;
+        }
+
+        h1 {
+          font-size: 8vw;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 1.5vw;
+          color: brown;
+
+          font-weight: bold;
+        }
+
+        button {
+          padding: 15px 30px;
+          border: 1px solid red;
+          background-color: rgb(255, 25, 0);
+          color: rgb(255, 255, 255);
+          border-radius: 20px;
+          transition: 0.4s;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.732);
+            color: rgb(0, 0, 0);
+            transform: rotateY(5deg);
+            border: 1px solid;
+          }
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .easily {
+          gap: 10px;
+
+          button {
+            padding: 3vw 6vw;
+          }
+        }
+      }
+    }
+
+    .men_img {
+      position: relative;
+
+      img {
+        width: 40%;
+        position: absolute;
+        right: 0;
+        transition: 0.4s;
+      }
 
       .easily {
         position: absolute;
@@ -43,35 +113,24 @@ main {
 
         p {
           font-size: 1.5vw;
-          color: rgb(255, 255, 255);
+          color: brown;
+          max-width: 500px;
           font-weight: bold;
         }
 
         button {
           padding: 15px 30px;
-          border: 1px solid white;
-          background-color: white;
-          color: black;
+          border: 1px solid red;
+          background-color: rgb(255, 25, 0);
+          color: rgb(255, 255, 255);
           border-radius: 20px;
           transition: 0.4s;
 
           &:hover {
-            background-color: rgba(226, 92, 92, 0);
-            color: rgb(255, 251, 251);
+            background-color: rgba(255, 255, 255, 0.732);
+            color: rgb(0, 0, 0);
             transform: rotateY(5deg);
             border: 1px solid;
-          }
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .easily {
-          gap: 10px;
-
-
-
-          button {
-            padding: 3vw 6vw;
           }
         }
       }
@@ -146,6 +205,8 @@ main {
       .myroom {
         max-width: 350px;
         width: 100%;
+        height: 200px;
+        overflow: hidden;
         position: relative;
         display: flex;
         justify-content: center;
@@ -154,15 +215,23 @@ main {
 
         img {
           width: 100%;
-          height: 200px;
+          height: auto;
+
         }
 
         .name {
           position: absolute;
+          background-color: rgba(78, 76, 76, 0.303);
+          padding: 100%;
 
           p {
-            color: white;
+
             font-size: 200%;
+
+            a {
+              color: white;
+
+            }
           }
         }
       }
@@ -237,6 +306,7 @@ main {
         .card {
           width: 300px;
           box-shadow: 10px 8px rgba(0, 0, 0, 0.050), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.100);
+          background-color: rgba(228, 230, 229, 0.122);
 
           .img {
             position: relative;
@@ -262,7 +332,8 @@ main {
               width: 100%;
               height: auto;
               transition: 0.4s;
-
+              position: relative;
+              top: -30px;
 
             }
 
@@ -440,6 +511,7 @@ main {
 
 
 
+
           .wislis {
             position: absolute;
             top: 10px;
@@ -460,7 +532,6 @@ main {
             height: auto;
             position: relative;
             top: -30px;
-
 
           }
 

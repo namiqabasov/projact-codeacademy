@@ -76,6 +76,12 @@
     margin: 100px auto;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
 
+    .login_worng {
+        font-size: 14px;
+        color: red;
+        padding: 10px 0;
+    }
+
     h1 {
         text-align: center;
         font-weight: bold;

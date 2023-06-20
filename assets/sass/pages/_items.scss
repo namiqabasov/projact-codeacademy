@@ -13,6 +13,26 @@ main {
                 }
             }
 
+            .image-container {
+                position: relative;
+                overflow: hidden;
+
+                .zoom-image {
+                    transition: transform 0.3s;
+                    cursor: zoom-in;
+
+                    &:hover {
+                        transform: scale(1.6);
+                        /* Increase the scale value to zoom in more */
+                    }
+                }
+            }
+
+
+
+
+
+
             .about {
                 width: 50%;
                 display: flex;

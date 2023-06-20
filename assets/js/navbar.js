@@ -12,6 +12,19 @@ remove.addEventListener("click", function () {
   myul.classList.remove("activebar");
   hamburger.classList.remove("is-active");
 });
+//icons page
+const blog_icon = document.querySelector(".blog_icon");
+const hom_icon = document.querySelector(".hom_icon");
+const home_li = document.querySelector(".home_li");
+const blog_li = document.querySelector(".blog_li");
+blog_icon.addEventListener("click", function () {
+  blog_li.classList.toggle("active_blog_li");
+  blog_icon.classList.toggle("transform_icon");
+});
+hom_icon.addEventListener("click", function () {
+  home_li.classList.toggle("active_home_li");
+  hom_icon.classList.toggle("transform_icon");
+});
 
 // nav position
 
@@ -87,7 +100,7 @@ function inputCReate(element) {
   myimg.src = element.img_src;
   a.innerHTML = element.name;
   p.innerText = element.price + "$";
-  a.href = `itemabout.html#${element.id}`;
+  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
 
   creddiv.classList.add("myCreput");
   imgdiv.append(myimg);

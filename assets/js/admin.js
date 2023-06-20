@@ -7,12 +7,22 @@ const api_myform = document.querySelector(".api_myform ");
 const singout = document.querySelector(".singout ");
 
 //admin login
-
 const adminobj = {
-  name: "namiq",
-  password: "12345",
+  name: "",
+  password: "",
 };
+async function adminfetch() {
+  const res = await fetch(`http://localhost:3000/admin`);
+  const data = await res.json();
+  data.forEach((element) => {
+    adminobj.name = element.name;
+    adminobj.password = element.password;
+  });
 
+  return adminobj;
+}
+
+adminfetch();
 const adminlogin = document.querySelector(".adminlogin");
 const admin_start = document.querySelector(".admin_start");
 const adminname = document.querySelector("#adminname");
@@ -136,7 +146,7 @@ function creElement(data) {
   });
 
   btnedit.addEventListener("click", function () {
-    document.documentElement.scrollTop = 100000;
+    document.documentElement.scrollTop = editform.offsetTop;
     pimgsrc.value = data.img_src;
     pname.value = data.name;
     pabout.value = data.command;
@@ -205,12 +215,17 @@ if (localStorage.getItem("admin")) {
     apicard.innerHTML = "";
     myfetch();
   });
+
+  document.getElementById("admin_register_link").href =
+    "http://127.0.0.1:5501/my-project/admin_register.html";
 }
 adminlogin.addEventListener("submit", function () {
   if (
     adminname.value === adminobj.name &&
     adminpass.value === adminobj.password
   ) {
+    document.querySelector(".worng").innerHTML = "";
+
     admindiv.style.cssText = `
     display:block;
     `;
@@ -232,5 +247,11 @@ adminlogin.addEventListener("submit", function () {
       apicard.innerHTML = "";
       myfetch();
     });
+
+    document.getElementById("admin_register_link").href =
+      "http://127.0.0.1:5501/my-project/admin_register.html";
+  } else {
+    document.querySelector(".worng").innerHTML =
+      "parol ve ya istifadeci adi yanlisdir";
   }
 });

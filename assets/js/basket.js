@@ -26,11 +26,21 @@ basket_arr.forEach((element) => {
   const decin = document.createElement("button");
   const delet = document.createElement("button");
 
+  const totaldiv = document.createElement("div");
+  const myh2 = document.createElement("h2");
+  const myh3 = document.createElement("h3");
+  const myp = document.createElement("p");
+
+  myh3.innerText = "prices: " + element.count;
+  myh2.innerText = element.name;
+  myp.innerText = element.price + "$";
+
+  totaldiv.classList.add("card");
   imgdiv.className = "imgdiv";
   mydiv.classList.add("card");
   myimg.src = element.img_src;
   a.innerHTML = element.name;
-  a.href = `itemabout.html#${element.id}`;
+  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
   incin.innerHTML = "+";
   secp.innerHTML = element.count;
   decin.innerHTML = "-";
@@ -43,6 +53,7 @@ basket_arr.forEach((element) => {
     basket_arr[basket_arr.findIndex((x) => element.id === x.id)].count++;
     localStorage.setItem("basket", JSON.stringify(basket_arr));
     getTotal();
+    myh3.innerText = "prices: " + element.count;
   };
   //azalma
   decin.addEventListener("click", () => {
@@ -50,6 +61,7 @@ basket_arr.forEach((element) => {
       return;
     }
     secp.innerHTML--;
+    myh3.innerText = "prices: " + element.count;
 
     basket_arr[basket_arr.findIndex((x) => element.id === x.id)].count--;
     localStorage.setItem("basket", JSON.stringify(basket_arr));
@@ -71,17 +83,34 @@ basket_arr.forEach((element) => {
   creddiv.append(h3, decin, secp, incin, delet);
   mydiv.append(creddiv, imgdiv);
   Basgetcard.append(mydiv);
+
+  totaldiv.append(myh2, myh3, myp);
+  document.querySelector(".appenddiv").append(totaldiv);
 });
 
 function getTotal() {
   total.innerHTML =
     basket_arr.reduce((sum, prev) => sum + prev.price * prev.count, 0) + "$";
+  document.querySelector(".mytotal p").innerHTML = total.innerHTML;
 }
 
 if (total.innerHTML == 0 + "$") {
   total.parentElement.innerHTML = "";
+  document.querySelector(".appenddiv").innerHTML = "";
 } else {
   total.parentElement.style.cssText = `
     padding: 20px;
     `;
 }
+
+document.querySelector(".total_btn").addEventListener("click", function () {
+  document.querySelector(".check").style.cssText = `
+  display:block;
+  `;
+});
+document.querySelector(".okey").addEventListener("click", function () {
+  document.querySelector(".check").style.cssText = `
+  display:none;
+  `;
+  window.location.reload();
+});
