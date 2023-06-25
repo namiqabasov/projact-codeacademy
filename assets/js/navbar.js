@@ -63,7 +63,7 @@ inputremov.addEventListener("click", function () {
 });
 
 async function imputFetch() {
-  const res = await fetch("http://localhost:3000/post");
+  const res = await fetch("https://namiq-myapi.onrender.com/data/post");
   const data = await res.json();
   data.forEach((element) => {
     if (
@@ -100,7 +100,7 @@ function inputCReate(element) {
   myimg.src = element.img_src;
   a.innerHTML = element.name;
   p.innerText = element.price + "$";
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
+  a.href = `itemabout.html#${element.id}`;
 
   creddiv.classList.add("myCreput");
   imgdiv.append(myimg);

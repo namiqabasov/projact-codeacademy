@@ -12,7 +12,7 @@ admin_register.addEventListener("submit", (e) => {
     };
     registerput(adminregiterobj);
     localStorage.removeItem("admin");
-    location.href = `http://127.0.0.1:5501/my-project/admin.html?#`;
+    location.href = `admin.html?#`;
   } else {
     adminregistr_worng.innerHTML = "butun hisseleri doldurun";
   }
@@ -20,7 +20,7 @@ admin_register.addEventListener("submit", (e) => {
 });
 
 async function registerput(obj) {
-  const res = fetch(`http://localhost:3000/admin/${obj.id}`, {
+  const res = fetch(`https://namiq-myapi.onrender.com/data/admin/${obj.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

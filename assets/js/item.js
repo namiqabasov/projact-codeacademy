@@ -22,7 +22,9 @@ const myseebox = document.querySelector(".myseebox");
 
 async function myfetchid() {
   const response = await fetch(
-    `http://localhost:3000/post/${window.location.hash.slice(1)}`
+    `https://namiq-myapi.onrender.com/data/post/${window.location.hash.slice(
+      1
+    )}`
   );
   const data = await response.json();
 

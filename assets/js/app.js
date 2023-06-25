@@ -109,7 +109,7 @@ window.addEventListener("scroll", scroll_animate);
 
 // mocapi hissesi
 async function myfetch() {
-  const respon = await fetch(`http://localhost:3000/post`);
+  const respon = await fetch(`https://namiq-myapi.onrender.com/data/post`);
   const data = await respon.json();
 
   data.forEach((element) => {
@@ -117,7 +117,7 @@ async function myfetch() {
   });
 }
 async function myfetch1() {
-  const respon = await fetch(`http://localhost:3000/post`);
+  const respon = await fetch(`https://namiq-myapi.onrender.com/data/post`);
   const data = await respon.json();
 
   const nevdata = await data.forEach((element) => {
@@ -281,7 +281,7 @@ function cretElement(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
-  btnsee.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  btnsee.href = `itemabout.html#${data.id}`;
 
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
@@ -360,7 +360,7 @@ function cretElement1(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
-  btnsee.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  btnsee.href = `itemabout.html#${data.id}`;
 
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
@@ -389,7 +389,7 @@ myfetch1();
 // } else {
 //   // async function loginfetch() {
 //   //   const res = await fetch(
-//   //     `http://localhost:3000/login/${window.location.hash.slice(1)}`
+//   //     `https://namiq-myapi.onrender.com/data/login/${window.location.hash.slice(1)}`
 //   //   );
 //   //   const data = await res.json();
 //   //   mynumber.innerText = data.mail;

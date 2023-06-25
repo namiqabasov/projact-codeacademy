@@ -22,7 +22,7 @@ const myproduct = document.querySelector(".myproduct");
 const hot_product = document.querySelector(".hot_product");
 
 async function product_fetch() {
-  const res = await fetch(`http://localhost:3000/post`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/post`);
   const data = await res.json();
   data.forEach((element) => {
     product_creat(element);
@@ -44,7 +44,7 @@ function product_creat(data) {
   a.innerText = data.name;
   h3.innerText = data.price + "$";
   p.innerText = data.command;
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  a.href = `itemabout.html#${data.id}`;
 
   //classlist
 
@@ -61,7 +61,7 @@ function product_creat(data) {
 }
 
 async function hot_product_fetch() {
-  const res = await fetch(`http://localhost:3000/post`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/post`);
   const data = await res.json();
   data.forEach((element) => {
     if (element.sale === "SALE!") {
@@ -84,7 +84,7 @@ function hot_product_creat(data) {
   a.innerText = data.name;
   h3.innerText = data.price + "$";
 
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+  a.href = `itemabout.html#${data.id}`;
 
   const myp = document.createElement("p");
   myp.innerText = "";

@@ -14,7 +14,7 @@ const adminobj = {
   password: "",
 };
 async function adminfetch() {
-  const res = await fetch(`http://localhost:3000/admin`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/admin`);
   const data = await res.json();
   data.forEach((element) => {
     adminobj.name = element.name;
@@ -75,13 +75,16 @@ const pamount = document.querySelector("#pamount");
 const pcatacory = document.querySelector("#pcatacory");
 
 async function putfetch(editobj) {
-  const res = await fetch(`http://localhost:3000/post/${editobj.id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(editobj),
-  });
+  const res = await fetch(
+    `https://namiq-myapi.onrender.com/data/post/${editobj.id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editobj),
+    }
+  );
 }
 
 //post ucun
@@ -96,7 +99,7 @@ const command = document.querySelector("#command");
 const catacory = document.querySelector("#catacory");
 
 async function postfetch(postobj) {
-  const res = await fetch(`http://localhost:3000/post`, {
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/post`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -122,7 +125,7 @@ function admin_post() {
 
 //creat ucun
 async function myfetch() {
-  const res = await fetch(`http://localhost:3000/post`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/post`);
   const data = await res.json();
 
   data.forEach((element) => {
@@ -137,9 +140,12 @@ async function myfetch() {
 }
 
 async function myfetchdelet(data) {
-  const res = await fetch(`http://localhost:3000/post/${data.id}`, {
-    method: "DELETE",
-  });
+  const res = await fetch(
+    `https://namiq-myapi.onrender.com/data/post/${data.id}`,
+    {
+      method: "DELETE",
+    }
+  );
 }
 
 function creElement(data) {
@@ -233,8 +239,7 @@ if (localStorage.getItem("admin")) {
     myfetch();
   });
 
-  document.getElementById("admin_register_link").href =
-    "http://127.0.0.1:5501/my-project/admin_register.html";
+  document.getElementById("admin_register_link").href = "admin_register.html";
 } else {
   adminfetch();
 }
@@ -267,8 +272,7 @@ adminlogin.addEventListener("submit", function () {
       myfetch();
     });
 
-    document.getElementById("admin_register_link").href =
-      "http://127.0.0.1:5501/my-project/admin_register.html";
+    document.getElementById("admin_register_link").href = "admin_register.html";
   } else {
     document.querySelector(".worng").innerHTML =
       "parol ve ya istifadeci adi yanlisdir";
@@ -278,7 +282,7 @@ adminlogin.addEventListener("submit", function () {
 //alicilar ucun
 
 async function get_alici() {
-  const res = await fetch(`http://localhost:3000/alicilar`);
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/alicilar`);
   const data = await res.json();
 
   data.forEach((element) => {
@@ -340,9 +344,12 @@ function alici_creElement(data) {
 }
 
 async function fetchalici_delet(data) {
-  const res = await fetch(`http://localhost:3000/alicilar/${data.id}`, {
-    method: "DELETE",
-  });
+  const res = await fetch(
+    `https://namiq-myapi.onrender.com/data/alicilar/${data.id}`,
+    {
+      method: "DELETE",
+    }
+  );
 }
 
 get_alici();

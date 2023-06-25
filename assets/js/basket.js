@@ -40,7 +40,7 @@ basket_arr.forEach((element) => {
   mydiv.classList.add("card");
   myimg.src = element.img_src;
   a.innerHTML = element.name;
-  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
+  a.href = `itemabout.html#${element.id}`;
   incin.innerHTML = "+";
   secp.innerHTML = element.count;
   decin.innerHTML = "-";
@@ -114,7 +114,7 @@ document.querySelector(".total_btn").addEventListener("click", function () {
   display:block;
   `;
   } else {
-    location.href = `http://127.0.0.1:5501/my-project/login.html?#`;
+    location.href = `login.html?#`;
   }
 });
 document.querySelector(".okey").addEventListener("click", function () {
@@ -138,7 +138,7 @@ async function post_alici() {
       basket_arr.reduce((sum, prev) => sum + prev.price * prev.count, 0) + "$",
   };
 
-  const res = await fetch(`http://localhost:3000/alicilar`, {
+  const res = await fetch(`https://namiq-myapi.onrender.com/data/alicilar`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
