@@ -92,6 +92,10 @@ function getTotal() {
   total.innerHTML =
     basket_arr.reduce((sum, prev) => sum + prev.price * prev.count, 0) + "$";
   document.querySelector(".mytotal p").innerHTML = total.innerHTML;
+
+  return (
+    basket_arr.reduce((sum, prev) => sum + prev.price * prev.count, 0) + "$"
+  );
 }
 
 if (total.innerHTML == 0 + "$") {
@@ -102,15 +106,43 @@ if (total.innerHTML == 0 + "$") {
     padding: 20px;
     `;
 }
+//alici ucun
 
 document.querySelector(".total_btn").addEventListener("click", function () {
-  document.querySelector(".check").style.cssText = `
+  if (localStorage.getItem("user")) {
+    document.querySelector(".check").style.cssText = `
   display:block;
   `;
+  } else {
+    location.href = `http://127.0.0.1:5501/my-project/login.html?#`;
+  }
 });
 document.querySelector(".okey").addEventListener("click", function () {
   document.querySelector(".check").style.cssText = `
   display:none;
   `;
+
+  if (localStorage.getItem("user")) {
+    post_alici();
+  }
+
   window.location.reload();
 });
+
+async function post_alici() {
+  const alici_obj = {
+    username: JSON.parse(localStorage.getItem("user")).name,
+    mail: JSON.parse(localStorage.getItem("user")).mail,
+    product: basket_arr,
+    total:
+      basket_arr.reduce((sum, prev) => sum + prev.price * prev.count, 0) + "$",
+  };
+
+  const res = await fetch(`http://localhost:3000/alicilar`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(alici_obj),
+  });
+}

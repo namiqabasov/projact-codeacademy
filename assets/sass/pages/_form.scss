@@ -137,6 +137,20 @@
             color: white;
         }
     }
+
+    .forget_pss {
+        padding: 0;
+        background: none;
+        position: relative;
+        left: 50px;
+        bottom: 30px;
+
+        &:hover {
+            background: none;
+            color: red;
+            text-align: end;
+        }
+    }
 }
 
 @media screen and (max-width:340px) {
@@ -145,5 +159,12 @@
         flex-direction: column;
         gap: 20px;
         align-items: center;
+    }
+
+    .login {
+        .forget_pss {
+
+            left: 0;
+        }
     }
 }

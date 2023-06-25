@@ -72,6 +72,7 @@ main {
                             max-width: 500px;
                             font-size: 1vw;
                         }
+
                     }
                 }
 
@@ -137,20 +138,20 @@ main {
 
                             h3 {
                                 color: black;
-                                font-size: 1.5vw;
+                                font-size: 24px;
                             }
 
-                            p {
 
+
+                            .sale {
                                 display: flex;
                                 align-self: center;
                                 justify-content: center;
-                                padding: 13% 3%;
+                                padding: 12% 5%;
                                 border-radius: 50%;
                                 color: white;
                                 background-color: rgba(254, 0, 0, 0.755);
-                                font-size: 2vw;
-
+                                font-size: 24px;
                             }
                         }
                     }

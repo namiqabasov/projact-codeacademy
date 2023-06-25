@@ -5,7 +5,7 @@ const email = document.querySelector("#email");
 const pass = document.querySelector("#pass");
 
 async function loginfetch(obj) {
-  const res = await fetch("https://namiq-myapi2.onrender.com/", {
+  const res = await fetch("http://localhost:3000/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

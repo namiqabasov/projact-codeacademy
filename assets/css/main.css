@@ -548,7 +548,7 @@ main .fade .slidecard {
 }
 main .fade .slidecard img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 main .fade .slidecard .easily {
   position: absolute;
@@ -583,6 +583,7 @@ main .fade .slidecard .easily button {
   color: rgb(255, 255, 255);
   border-radius: 20px;
   transition: 0.4s;
+  font-size: 14px;
 }
 main .fade .slidecard .easily button:hover {
   background-color: rgba(255, 255, 255, 0.732);
@@ -614,7 +615,7 @@ main .fade .men_img .easily {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   align-items: start;
   opacity: 0;
   transition: 0.5s;
@@ -2353,12 +2354,12 @@ main .total {
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 10;
+  z-index: 3;
   bottom: 10%;
   right: 10%;
   background-color: rgba(122, 8, 8, 0.855);
   border-radius: 10px;
-  font-size: 2vw;
+  font-size: 24px;
 }
 main .total .total_btn {
   background-color: white;
@@ -2468,21 +2469,31 @@ main .Basgetcard .shop .ptag h2 {
   color: rgba(247, 125, 125, 0.755);
 }
 main .check {
-  position: absolute;
+  position: fixed;
   background-color: rgb(170, 167, 167);
   padding: 50px;
   z-index: 3;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
   left: 50%;
   display: none;
   max-width: 500px;
   width: 100%;
 }
+main .check h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(117, 4, 4, 0.892);
+  margin-bottom: 10px;
+  text-align: center;
+}
 main .check .card {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 2vw;
+  font-size: 16px;
+}
+main .check .card h2 {
+  font-size: 20px;
 }
 main .check .mytotal {
   position: relative;
@@ -2492,7 +2503,27 @@ main .check .mytotal {
   background-color: wheat;
   padding: 10px;
   margin-top: 10px;
-  font-size: 1.5vw;
+  font-size: 14px;
+}
+@media screen and (max-width: 400px) {
+  main .total {
+    flex-direction: column;
+  }
+  main .check {
+    overflow: auto;
+    height: 200px;
+  }
+  main .check h1 {
+    padding: 10px;
+  }
+  main .check .card {
+    flex-direction: column;
+    border-bottom: 5px solid sandybrown;
+    margin-top: 30px;
+  }
+  main .check .card h2 {
+    font-size: 16px;
+  }
 }
 
 main .mycard .mycontainer {
@@ -2778,6 +2809,18 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   background-color: rgba(72, 13, 13, 0.804);
   color: white;
 }
+.login .forget_pss {
+  padding: 0;
+  background: none;
+  position: relative;
+  left: 50px;
+  bottom: 30px;
+}
+.login .forget_pss:hover {
+  background: none;
+  color: red;
+  text-align: end;
+}
 
 @media screen and (max-width: 340px) {
   .mybtndiv {
@@ -2785,6 +2828,9 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+  }
+  .login .forget_pss {
+    left: 0;
   }
 }
 .myadmin {
@@ -3122,6 +3168,72 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
     width: 20vw;
   }
 }
+.myadmin .admin_bar .alici_div {
+  display: none;
+  padding-top: 200px;
+}
+.myadmin .admin_bar .alici_div h2 {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  padding: 30px 0;
+}
+.myadmin .admin_bar .alici_div .alici_api {
+  display: flex;
+  flex-direction: column;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid sandybrown;
+  padding: 20px;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart h2,
+.myadmin .admin_bar .alici_div .alici_api .cart h3 {
+  color: white;
+  text-align: start;
+  padding: 10px;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid sandybrown;
+  padding-bottom: 10px;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about div .myimgdiv {
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  padding: 0;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about div .myimgdiv img {
+  width: 100%;
+  height: auto;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about div h4 {
+  color: white;
+  max-width: 100px;
+  text-align: center;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart .about div p {
+  color: wheat;
+  text-align: center;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart button {
+  padding: 5px 10px;
+  border: 0;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+.myadmin .admin_bar .alici_div .alici_api .cart button:hover {
+  background-color: rgba(244, 4, 4, 0.478);
+}
 .myadmin .admin_registr {
   background: none;
   border: 0;
@@ -3294,17 +3406,17 @@ main .product_shopp .mycontainer .my_filter .hot_product .card .about h2 a {
 }
 main .product_shopp .mycontainer .my_filter .hot_product .card .about h3 {
   color: black;
-  font-size: 1.5vw;
+  font-size: 24px;
 }
-main .product_shopp .mycontainer .my_filter .hot_product .card .about p {
+main .product_shopp .mycontainer .my_filter .hot_product .card .about .sale {
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 13% 3%;
+  padding: 12% 5%;
   border-radius: 50%;
   color: white;
   background-color: rgba(254, 0, 0, 0.755);
-  font-size: 2vw;
+  font-size: 24px;
 }
 
 main .myblog {
@@ -3398,12 +3510,18 @@ main .contact_section .about_contact {
 main .contact_section .contact-info h3,
 main .contact_section .social-media h3,
 main .contact_section .contact-form h3 {
-  font-size: 1.5vw;
+  font-size: 24px;
   margin-bottom: 10px;
   padding: 20px 0;
 }
+main .contact_section .contact-info {
+  max-width: 500px;
+  width: 100%;
+}
 main .contact_section .contact-info p {
   margin-bottom: 10px;
+  font-size: 23px;
+  width: 100%;
 }
 main .contact_section .social-media ul {
   list-style: none;
